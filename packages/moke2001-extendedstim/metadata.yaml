@@ -1,0 +1,32 @@
+source_type: github
+owner: Moke2001
+repo: ExtendedStim
+full_name: Moke2001/ExtendedStim
+title: ExtendedStim
+summary: ExtendedStim 是一个面向量子纠错研究的 Python 工具包。
+overview: 'ExtendedStim 是一个面向量子纠错研究的 Python 工具包。对一般读者来说，量子纠错可以理解为给极其脆弱的量子信息设计“防错机制”：研究者需要构造纠错码、模拟量子线路中的噪声，并估计错误最终是否会破坏真正要保存的信息。
+
+
+  仓库说明显示，它主要用于构造和测试量子纠错码与量子线路，并通过 Monte Carlo 模拟计算逻辑错误率。它把 QuTiP、Stim、Stimbposd、Galois、NumPy、SciPy、Matplotlib、Qiskit
+  和 Mip 等工具组织到同一个工作流里，适合做量子纠错方案的快速实验、参数计算和可复现验证。
+
+
+  从用途上看，它更像一个研究软件工作台：先搭建纠错码和量子线路，再用模拟器反复抽样错误过程，最后比较预测正确性和逻辑错误率。仓库说明标题还强调它同时关注费米子和玻色子量子纠错，因此它服务的是更广泛的量子信息保护问题，而不只是某一种硬件或某一种码型。'
+github_url: https://github.com/Moke2001/ExtendedStim
+clone_url: https://github.com/Moke2001/ExtendedStim.git
+zip_url: https://github.com/Moke2001/ExtendedStim/archive/refs/heads/master.zip
+homepage: ''
+default_branch: master
+language: Python
+languages:
+  Python: 232127
+language_breakdown:
+- language: Python
+  bytes: 232127
+  percent: 100.0
+license: MIT License
+last_updated: '2026-03-27'
+topics: []
+deepseek_model: deepseek-v4-pro
+deepseek_status: missing_deepseek_api_key
+deepseek_error: ''

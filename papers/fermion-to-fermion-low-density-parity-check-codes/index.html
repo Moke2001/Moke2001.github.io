@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fermion-to-Fermion Low-Density Parity-Check Codes</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body class="detail papers-page">
+  <canvas id="particle-field" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <a class="brand" href="../../index.html#home"><img class="brand-logo" src="../../assets/eureka-logo.png" alt="" aria-hidden="true"><span class="brand-name">Eureka</span></a>
+    <nav class="site-nav" aria-label="主导航">
+      <a class="" href="../../index.html#home">首页</a>
+      <a class="is-active" href="../../papers/index.html">论文</a>
+      <a class="" href="../../packages/index.html">工具与数据</a>
+    </nav>
+  </header>
+  <main><section class="work-hero work-hero-compact"><div><p class="eyebrow">科研成果</p><h1>Fermion-to-Fermion Low-Density Parity-Check Codes</h1><div class="work-meta"><span>arXiv:2508.15323</span><span>Chong-Yuan Xu, Ze-Chuan Liu, Yong Xu</span><span>2026-02-18</span></div><div class="work-actions"><a class="button" href="https://arxiv.org/abs/2508.15323">arXiv 页面</a><a class="button" href="https://arxiv.org/pdf/2508.15323">阅读 PDF</a><a class="button" href="https://arxiv.org/e-print/2508.15323">直接下载</a></div></div></section><section class="popular-science-panel work-section"><h2>概述</h2><!-- POPULAR_SCIENCE_START -->
+<div class="popular-science-content">
+  <p class="science-deck">这项研究提出一种直接面向费米子量子计算的 LDPC 纠错方案，尝试减少费米子系统映射到量子比特时带来的额外开销，并通过模拟展示错误抑制效果。</p>
+  <div class="science-section">
+    <h4>研究概览</h4>
+    <p>很多量子模拟任务本来研究的是费米子系统，例如电子在材料中的运动。但现有量子计算机通常以量子比特为基本单元，研究者需要先把费米子问题转换成量子比特问题，这一步会引入额外资源消耗。本文关注的是另一条路线：能否让容错量子计算更直接地在费米子编码上工作。</p>
+  </div>
+  <div class="science-section">
+    <h4>核心思路</h4>
+    <p>论文提出了费米子到费米子的低密度奇偶校验码方案。直观地说，它把费米子 LDPC 码作为信息存储结构，再把状态转移到费米子 color code 处理器上执行逻辑操作。作者还给出寻找奇权重逻辑 Majorana 算符的算法，并讨论用费米子 lattice surgery 完成状态转移的方法。数值例子显示，相关编码率可以接近量子比特码，同时逻辑失败率能明显低于物理错误率。</p>
+  </div>
+  <div class="science-list-block">
+    <h4>术语介绍</h4>
+    <dl>
+      <dt>费米子</dt>
+      <dd>电子等物质粒子所属的一类量子对象，许多材料和化学体系的模拟都需要处理费米子规律。</dd>
+      <dt>LDPC 码</dt>
+      <dd>低密度奇偶校验码，特点是每个校验只关联少量变量，适合构造可扩展的纠错结构。</dd>
+      <dt>Majorana 算符</dt>
+      <dd>描述费米子自由度的一种数学对象，在费米子编码和拓扑量子信息中经常出现。</dd>
+      <dt>Lattice surgery</dt>
+      <dd>通过切分、合并编码区域来转移或组合量子信息的一类容错操作思想。</dd>
+    </dl>
+  </div>
+  <div class="science-section">
+    <h4>后续展望</h4>
+    <p>这类方案把纠错码设计、费米子物理系统模拟和容错操作放到同一个框架里考虑。后续可以继续比较不同费米子编码在真实噪声模型下的表现，优化状态转移过程，并探索它们与具体量子硬件架构之间的匹配方式。</p>
+  </div>
+</div>
+<!-- POPULAR_SCIENCE_END --></section><section class="work-section paper-figures-panel"><h2>论文图片</h2><div class="figure-carousel" data-figure-carousel><button class="figure-carousel-arrow prev" type="button" data-figure-step="-1" aria-label="上一张论文图片"></button><div class="figure-carousel-track"><figure class="figure-card figure-slide is-active"><img src="figures/01-fig1.png" alt=""><figcaption>展示本文的整体方案：费米子 LDPC 记忆区通过 lattice surgery 将状态转移到 color code 处理器中，再执行逻辑操作。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/02-memorysimulation.png" alt=""><figcaption>展示费米子 LDPC 记忆区的模拟设置，用来评估编码在噪声下保存量子信息的能力。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/03-latticesurgery.png" alt=""><figcaption>展示 lattice surgery 状态转移流程，说明不同编码区域如何通过合并和切分完成信息传递。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/04-tasksimulation.png" alt=""><figcaption>展示任务级模拟流程，把纠错码构造、噪声抽样和逻辑失败率估计串联起来。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/05-figs-stabilizers.png" alt=""><figcaption>展示相关稳定子或校验结构，帮助说明编码如何约束允许的量子态。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/06-figs-general-ls.png" alt=""><figcaption>展示更一般的 lattice surgery 构型，说明状态转移方法如何扩展到不同几何布局。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/07-figs1.png" alt=""><figcaption>展示论文中的第 7 张图，用来辅助说明相关构造、流程或模拟结果。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/08-teleportation.png" alt=""><figcaption>展示借助遥传思想完成状态转移的示意，连接记忆区、辅助区和处理器。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/09-figs-cycle.png" alt=""><figcaption>展示循环式操作或测量流程，用来说明重复纠错步骤中的信息流动。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/10-figs-weight.png" alt=""><figcaption>展示不同权重算符或错误模式的比较，帮助分析码的纠错性质。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/11-errormodel.png" alt=""><figcaption>展示物理噪声和错误事件的建模方式，是后续逻辑失败率模拟的输入。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/12-syndromeextraction.png" alt=""><figcaption>展示 syndrome extraction 过程，即通过测量校验信息来发现可能发生的错误。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/13-codecapacitysimulation.png" alt=""><figcaption>展示 code capacity 噪声模型下的模拟结果，用于比较理想化条件下的纠错表现。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/14-phenomenologicalsimulation.png" alt=""><figcaption>展示 phenomenological 噪声模型下的模拟结果，加入更接近重复测量过程的错误来源。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/15-circuitlevelsimulation.png" alt=""><figcaption>展示 circuit-level 噪声模型下的模拟结果，进一步考虑门操作和测量过程中的错误。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/16-stackedcodes.png" alt=""><figcaption>展示 stacked code 构造或对比结果，说明多层结构对编码性能的影响。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/17-detectorerrormodel.png" alt=""><figcaption>展示 detector error model 的电路示例，说明噪声事件如何触发探测器和逻辑观测量。</figcaption></figure><figure class="figure-card figure-slide"><img src="figures/18-figs-simulation.png" alt=""><figcaption>展示最终动力学模拟或错误抑制结果，用来验证方案在费米子系统模拟中的效果。</figcaption></figure></div><button class="figure-carousel-arrow next" type="button" data-figure-step="1" aria-label="下一张论文图片"></button><p class="figure-carousel-status"><span data-figure-current>1</span> / 18</p></div></section><section class="work-section pdf-preview-panel"><h2>PDF 预览</h2><iframe class="pdf-frame" src="https://arxiv.org/pdf/2508.15323" title="论文 PDF 预览"></iframe></section></main>
+  <script src="../../assets/particles.js"></script>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

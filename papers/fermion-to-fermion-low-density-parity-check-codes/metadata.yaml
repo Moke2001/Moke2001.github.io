@@ -1,0 +1,305 @@
+arxiv_id: '2508.15323'
+title: Fermion-to-Fermion Low-Density Parity-Check Codes
+authors:
+- Chong-Yuan Xu
+- Ze-Chuan Liu
+- Yong Xu
+abstract: Simulating fermionic systems on qubit-based quantum computers often demands
+  significant computational resources due to the requirement to map fermions to qubits.
+  Thus, designing a fault-tolerant quantum computer that operates directly with fermions
+  offers an effective solution to this challenge. Here, we introduce a protocol for
+  fault-tolerant fermionic quantum computation utilizing fermion-to-fermion low-density
+  parity-check (LDPC) codes. Our method employs a fermionic LDPC memory, which transfers
+  its state to fermionic color code processors, where logical operations are subsequently
+  performed. We propose using odd-weight logical Majorana operators to form the code
+  space, serving as memory for the fermionic LDPC code, and provide an algorithm to
+  identify these logical operators. We present examples showing that the encoding
+  rate of fermionic codes often matches that of qubit codes, while the logical failure
+  rate can be significantly lower than the physical error rate. Furthermore, we propose
+  two methods for performing fermionic lattice surgery to facilitate state transfer.
+  Finally, we simulate the dynamics of a fermionic system using our protocol, illustrating
+  effective error suppression.
+published: '2025-08-21T07:37:03Z'
+updated: '2026-02-18T10:01:19Z'
+doi: ''
+categories:
+- quant-ph
+- cs.DS
+primary_category: quant-ph
+summary: 这项研究提出一种直接面向费米子量子计算的 LDPC 纠错方案，尝试减少费米子系统映射到量子比特时带来的额外开销，并通过模拟展示错误抑制效果。
+deck: 这项研究提出一种直接面向费米子量子计算的 LDPC 纠错方案，尝试减少费米子系统映射到量子比特时带来的额外开销，并通过模拟展示错误抑制效果。
+overview: '## 研究概览
+
+
+  很多量子模拟任务本来研究的是费米子系统，例如电子在材料中的运动。但现有量子计算机通常以量子比特为基本单元，研究者需要先把费米子问题转换成量子比特问题，这一步会引入额外资源消耗。本文关注的是另一条路线：能否让容错量子计算更直接地在费米子编码上工作。
+
+
+  ## 核心思路
+
+
+  论文提出了费米子到费米子的低密度奇偶校验码方案。直观地说，它把费米子 LDPC 码作为信息存储结构，再把状态转移到费米子 color code 处理器上执行逻辑操作。作者还给出寻找奇权重逻辑
+  Majorana 算符的算法，并讨论用费米子 lattice surgery 完成状态转移的方法。数值例子显示，相关编码率可以接近量子比特码，同时逻辑失败率能明显低于物理错误率。
+
+
+  ## 术语介绍
+
+
+  - 费米子：电子等物质粒子所属的一类量子对象，许多材料和化学体系的模拟都需要处理费米子规律。
+
+
+  - LDPC 码：低密度奇偶校验码，特点是每个校验只关联少量变量，适合构造可扩展的纠错结构。
+
+
+  - Majorana 算符：描述费米子自由度的一种数学对象，在费米子编码和拓扑量子信息中经常出现。
+
+
+  - Lattice surgery：通过切分、合并编码区域来转移或组合量子信息的一类容错操作思想。
+
+
+  ## 后续展望
+
+
+  这类方案把纠错码设计、费米子物理系统模拟和容错操作放到同一个框架里考虑。后续可以继续比较不同费米子编码在真实噪声模型下的表现，优化状态转移过程，并探索它们与具体量子硬件架构之间的匹配方式。'
+figures:
+- file: figures/01-fig1.png
+  name: fig1
+  caption: 展示本文的整体方案：费米子 LDPC 记忆区通过 lattice surgery 将状态转移到 color code 处理器中，再执行逻辑操作。
+  source_caption: 'Schematic illustration of fault-tolerant fermionic quantum computation
+    framework. The architecture comprises three components: fermionic memory implemented
+    using fermionic LDPC codes, fermionic processor implemented using fermionic color
+    codes to execute logical operations, and fermionic interface composed of ancilla
+    fermions serving as a critical bridge for communication between memory and processor.'
+  source_file: fig1.pdf
+  order: 1
+- file: figures/02-memorysimulation.png
+  name: MemorySimulation
+  caption: 展示费米子 LDPC 记忆区的模拟设置，用来评估编码在噪声下保存量子信息的能力。
+  source_caption: (a) Illustration of the circuit-level noise model where the syndrome
+    extraction transfer circuits used to establish entanglement between data fermions
+    and ancilla qubits are noisy. The initial states are physical |0 states for fermions.
+    In the end, a transversal measurement on all physical fermion modes in the particle
+    number basis is performed. Logical failure rate p_L versus physical error rate
+    p under (b) phenomenological and (c) circuit-level noise model for fermionic [[20,4,4]]_{f},
+    [[36,4,6]]_{f} and [[44,4,7]]_{f} double-chain bicycle codes. We also perform
+    a power law fit to the data according to the fitting formula p_L p^ with =2.21,
+    3.06, 4.3 in (b) and =2.12, 3.46, 4.54 in (c), and the gray lines represent the
+    probability that at least an error occurs on four physical fermion modes. Here,
+    the Tesseract decoder beni2025tesseractdecoder is employed, and the results obtained
+    using the belief propagation and ordered-statistical decoding (BP+OSD) liang2025low,roffe_decoding_2020
+    algorithm are presented in Supplemental Material.
+  source_file: MemorySimulation.pdf
+  order: 2
+- file: figures/03-latticesurgery.png
+  name: LatticeSurgery
+  caption: 展示 lattice surgery 状态转移流程，说明不同编码区域如何通过合并和切分完成信息传递。
+  source_caption: '(a) Quantum circuit to transfer a logical fermionic state _A to
+    code block B (initialized as 0_B). The protocol involves: (i) measuring _A_B and
+    applying the Z gate of (_B), provided the measurement result is -1; (ii) measuring
+    the logical particle number n_A and applying {two braiding gates and one fermionic
+    Z gate}, if the measurement outcome is 1; (iii) applying a phase rotation S gate
+    to the state in the processor. The validation of this circuit is provided in Supplemental
+    Material. (b) Illustration of the first method for lattice surgery achieving fault-tolerant
+    measurements of _A _B in the case with |_A|=|_B|. In this example, code B is a
+    d=5 fermionic color code, and code A is a fermionic LDPC code containing five
+    Majorana operators in the support of _A. The empty circles represent the -type
+    Majorana operators in blocks A and B. Several pairs of ancilla Majorana operators
+    are introduced with each horizontal pair represented by yellow and gray circles
+    to denote -type and ^-type Majorana operator forming a complex fermion. The -type
+    stabilizer generators at the boundary, connected to ancilla fermions, are modified
+    to incorporate the ancilla Majorana operators (green rhombuses). Measurement and
+    gauge stabilizer generators are depicted as blue squares and red triangles, respectively.
+    The product of these stabilizer generators yields the joint logical operator _A
+    _B. The ^-ty'
+  source_file: LatticeSurgery.pdf
+  order: 3
+- file: figures/04-tasksimulation.png
+  name: TaskSimulation
+  caption: 展示任务级模拟流程，把纠错码构造、噪声抽样和逻辑失败率估计串联起来。
+  source_caption: (a) Quantum circuit used to benchmark our protocol. We first initialize
+    the system in the logical state |0101 and then apply three tunneling gates with
+    each gate executing the operation {T}_{j,j+1}= ( (c_j^ c_{j+1} + H.c.)/2). Onsite
+    measurements of n_j=c_j^ c_j with j=0,1,2 are then performed, followed by a fermionic
+    swap (fSWAP) gate if the measurement result is zero. The unitary gates and feedback
+    process constitute a module, which is executed consecutively multiple times. (b)
+    The expectation value of logical particle numbers at site 1 and 4 with respect
+    to time which is characterized by the number of executed modules. We see that
+    the simulation under circuit-level noise with error correction (filled blue circles
+    and squares) is close to the noiseless simulation result (the dotted-dashed lines),
+    in stark contrast to the simulation results under noise without error correction
+    (filled red circles and squares). In the simulation, we apply the first method
+    for lattice surgery. Results using the second method are provided in the Supplemental
+    Material. Here, we set the physical error rate p=10^{-4}. The error bars are hidden
+    behind the symbols.
+  source_file: TaskSimulation.pdf
+  order: 4
+- file: figures/05-figs-stabilizers.png
+  name: figs-stabilizers
+  caption: 展示相关稳定子或校验结构，帮助说明编码如何约束允许的量子态。
+  source_caption: Illustration of modified stabilizers in (a), measurement stabilizers
+    in (b), and gauges stabilizers in (c) for a specific case of fermionic lattice
+    surgery using method 1. Before merging, the original stabilizers include those
+    of the fermionic LDPC code, the color code, and the stabilizers of ancilla Majorana
+    operators (each stabilizer includes a pair of ancilla Majorana operators forming
+    a complex fermion).
+  source_file: figs-stabilizers.pdf
+  order: 5
+- file: figures/06-figs-general-ls.png
+  name: figs-general-LS
+  caption: 展示更一般的 lattice surgery 构型，说明状态转移方法如何扩展到不同几何布局。
+  source_caption: Illustration of how to add ancilla Majorana modes and stabilizers
+    for a merged code using method 2. Here we consider two logical operators in codes
+    A and B, supported by five and three Majorana operators, respectively. Initially,
+    we have two logical operators described by the original stabilizer generators
+    represented by green rhombuses and Majorana operators represented by circles for
+    code A in the support of _A and for code B in the support of _B (see (a)). Pairs
+    of ancilla Majorana operators (yellow and gray circles) are added following the
+    rules detailed in the text, and the modified stabilizer generators are introduced
+    (see (b)). We then incorporate measurement stabilizer generators with an additional
+    pair of ancilla Majorana operators to make their weights even (see (c)). In (d),
+    we label all ancilla modes and construct a graph with vertices corresponding to
+    stabilizers and ancilla Majorana modes, and edges defined between them accordingly,
+    which corresponds to Fig. S3(a) in Supplemental Material. The gauge stabilizer
+    generators are also presented in Fig. S3(c) in Supplemental Material.
+  source_file: figs-general-LS.pdf
+  order: 6
+- file: figures/07-figs1.png
+  name: figs1
+  caption: 展示论文中的第 7 张图，用来辅助说明相关构造、流程或模拟结果。
+  source_caption: (a) The Tanner graph description of the Steane code. The circles,
+    blue and green squares represent the fermions, the -type stabilizers, and the
+    '-type stabilizers, respectively. (b) Illustration of a circulant matrix used
+    to construct bicycle codes. (c) Illustration of the Euclidean geometry when (m,q)=(2,3).
+    In this special case, the lines are the straight lines on a torus with different
+    directions. (d) The Fano plane, which is the simplest example of a finite projective
+    plane. We will use many planes like this in code construction from finite projective
+    geometry.
+  source_file: figs1.pdf
+  order: 7
+- file: figures/08-teleportation.png
+  name: Teleportation
+  caption: 展示借助遥传思想完成状态转移的示意，连接记忆区、辅助区和处理器。
+  source_caption: Illustration of implementing _j_B transversally between a memory
+    and a processor. f_j^1, f_j^2, , f_j^L denote the physical fermion sites in the
+    memory so that the logical Majorana operators _j and _j' are given by product
+    of physical Majorana operators at these sites (similarly for the processor).
+  source_file: Teleportation.pdf
+  order: 8
+- file: figures/09-figs-cycle.png
+  name: figs-cycle
+  caption: 展示循环式操作或测量流程，用来说明重复纠错步骤中的信息流动。
+  source_caption: Illustration of construction of gauge stabilizer generators in a
+    general fermionic lattice surgery using method 2. (a) An initial graph. (b) A
+    graph obtained by splitting modified stabilizers via adding more vertices, called
+    split points, and by adding an endpoint that connects the ancilla Majorana operators
+    introduced to ensure even-weight measurement stabilizers (node 3 and node 15).
+    (c) Independent cycles, each represented by different colored closed paths. These
+    figures correspond to the case shown in Fig. 6 in the main text. (d) Independent
+    cycles for the case of performing fermionic lattice surgery between PG(2,8) and
+    d=5 fermionic color code.
+  source_file: figs-cycle.pdf
+  order: 9
+- file: figures/10-figs-weight.png
+  name: figs-weight
+  caption: 展示不同权重算符或错误模式的比较，帮助分析码的纠错性质。
+  source_caption: Numerically computed maximum weight of the gauge stabilizers for
+    1000 randomly generated code pairs (A and B) with respect to the average weight
+    of _A and _B. The dotted-dashed line is power-law fit of the data.
+  source_file: figs-weight.pdf
+  order: 10
+- file: figures/11-errormodel.png
+  name: ErrorModel
+  caption: 展示物理噪声和错误事件的建模方式，是后续逻辑失败率模拟的输入。
+  source_caption: 'Illustration of three error models: (a) code-capacity, (b) phenomenological,
+    and (c) circuit-level error models. Here, the syndrome extraction circuit corresponds
+    to the syndrome extraction transfer used to establish entanglement between data
+    fermions and ancilla qubits, followed by measurements on the ancilla qubits. In
+    (a) and (b), the syndrome extraction transfer is noiseless, while in (c), it is
+    noisy as shown in Fig. SEcircuit. In all three cases, the initial states are physical
+    |0 states for fermions. In (b) and (c), d rounds of syndrome extractions are applied
+    and, a transversal measurement on all physical fermion modes in the particle-number
+    basis is performed in the end.'
+  source_file: ErrorModel.pdf
+  order: 11
+- file: figures/12-syndromeextraction.png
+  name: SyndromeExtraction
+  caption: 展示 syndrome extraction 过程，即通过测量校验信息来发现可能发生的错误。
+  source_caption: Noisy fermionic syndrome extraction circuit for measuring the stabilizer
+    -_1_2_3_4 at four fermionic sites assisted by a qubit Schuckert2024arxiv.
+  source_file: SyndromeExtraction.pdf
+  order: 12
+- file: figures/13-codecapacitysimulation.png
+  name: CodeCapacitySimulation
+  caption: 展示 code capacity 噪声模型下的模拟结果，用于比较理想化条件下的纠错表现。
+  source_caption: Logical failure rate with respect to physical error rate for the
+    fermionic PG(2,4) ([[16,6,3]]_{f}) code, the fermionic EG(2,4) ([[30,2,5]]_{f})
+    code, the fermionic [[100,20,7]]_{f} bicycle code in (a), and for three double-chain
+    bicycle codes in (b), under code-capacity noise model. Here, the BP+OSD decoder
+    is used. The error bars are hidden behind the data points. The dash-dotted lines---similarly
+    depicted in Fig. FigPhen, Fig. FigCircuit, and Fig. StackedCodes---are the linear
+    fit of the four smallest data points.
+  source_file: CodeCapacitySimulation.pdf
+  order: 13
+- file: figures/14-phenomenologicalsimulation.png
+  name: PhenomenologicalSimulation
+  caption: 展示 phenomenological 噪声模型下的模拟结果，加入更接近重复测量过程的错误来源。
+  source_caption: Logical failure rate as a function of physical error rate for the
+    fermionic PG(2,4) ([[16,6,3]]_{f}) code, the fermionic EG(2,4) ([[30,2,5]]_{f})
+    code, the fermionic [[100,20,7]]_{f} bicycle code in (a) and (b), and for three
+    double-chain bicycle codes in (c) and (d), under phenomenological noise model.
+    In (a) and (c), the BP+OSD decoder is used, whereas in (b) and (d), the Tesseract
+    decoder is employed. The error bars are hidden behind the data points.
+  source_file: PhenomenologicalSimulation.pdf
+  order: 14
+- file: figures/15-circuitlevelsimulation.png
+  name: CircuitLevelSimulation
+  caption: 展示 circuit-level 噪声模型下的模拟结果，进一步考虑门操作和测量过程中的错误。
+  source_caption: Logical failure rate with respect to physical error rate for the
+    PG(2,4) ([[16,6,3]]_{f}) code, the EG(2,4) ([[30,2,5]]_{f}) code, the [[100,20,7]]_{f}
+    bicycle code in (a) and (b), and for three double-chain bicycle codes in (c) and
+    (d), under circuit noise model. In (a) and (c), the BP+OSD decoder is used, whereas
+    in (b) and (d), the Tesseract decoder is employed. The error bars are hidden behind
+    the data points. The grey lines in (c) and (d) represent the probability that
+    an error occurs on at least one physical site.
+  source_file: CircuitLevelSimulation.pdf
+  order: 15
+- file: figures/16-stackedcodes.png
+  name: StackedCodes
+  caption: 展示 stacked code 构造或对比结果，说明多层结构对编码性能的影响。
+  source_caption: Logical failure rate versus physical error rate obtained under circuit-level
+    error model using the Tesseract decoder for (a) fermionic double-layer BB codes,
+    (b) fermionic double-layer twisted BB codes, and (c) fermionic double-layer reflection
+    codes. The grey lines represent the probability that an error occurs on at least
+    one physical site.
+  source_file: StackedCodes.pdf
+  order: 16
+- file: figures/17-detectorerrormodel.png
+  name: DetectorErrorModel
+  caption: 展示 detector error model 的电路示例，说明噪声事件如何触发探测器和逻辑观测量。
+  source_caption: (a) For the circuit, a detector is a measurement outcome in the
+    Z basis, and an X error can trigger the detector, i.e., flip the value of the
+    detector to -1. (b) A Z error cannot trigger the detector. (c) We use a Majorana
+    repetition code consisting of three fermion sites for demonstration of a detector
+    error model. Two noises N_1 and N_2 and one measurement error E_1 are considered.
+    S_1 and S_3 (S_2 and S_4) are the measurement outcomes of the stabilizer -_1_1'_2_2'
+    (-_2_2'_3_3'). T_j with j=1,2,3 denotes the measurement outcome of the particle
+    number operator at the jth physical fermion site.
+  source_file: DetectorErrorModel.pdf
+  order: 17
+- file: figures/18-figs-simulation.png
+  name: figs-simulation
+  caption: 展示最终动力学模拟或错误抑制结果，用来验证方案在费米子系统模拟中的效果。
+  source_caption: The time evolution of logical particle numbers at sites 1 and 4,
+    which are the same as in Fig. 4(b) except that the lattice surgery is performed
+    using the second method. The error bars are hidden behind the symbols.
+  source_file: figs-simulation.pdf
+  order: 18
+year: '2025'
+source_url: https://arxiv.org/abs/2508.15323
+pdf_url: https://arxiv.org/pdf/2508.15323
+tex_source_url: https://arxiv.org/e-print/2508.15323
+deepseek_model: deepseek-v4-pro
+deepseek_status: missing_deepseek_api_key
+deepseek_error: ''
+figure_caption_model: deepseek-v4-pro
+figure_caption_status: missing_deepseek_api_key
+figure_caption_error: ''

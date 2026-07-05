@@ -1,0 +1,24 @@
+arxiv_id: '2606.20548'
+title: 'Topological Codes from Space Groups: A Route beyond Translation Invariance'
+authors:
+  - Chong-Yuan Xu
+  - Ze-Chuan Liu
+  - Yong Xu
+year: 2026
+published: '2026-06-23'
+updated: '2026-06-23'
+deck: 一项新的理论研究提出利用空间群构造拓扑量子纠错码，打破了传统的平移不变性限制，有望提升码的局部性，并为量子计算机硬件协同设计开辟新道路。
+summary: 一项新的理论研究提出利用空间群构造拓扑量子纠错码，打破了传统的平移不变性限制，有望提升码的局部性，并为量子计算机硬件协同设计开辟新道路。
+figures:
+  - file: figures/framework.png
+    name: Framework
+    caption: 空间群拓扑码框架示意图。
+  - file: figures/embedding.png
+    name: Embedding
+    caption: 空间群构造与拓扑码嵌入关系示意图。
+  - file: figures/movement.png
+    name: Movement
+    caption: 点群操作与局域移动结构示意图。
+  - file: figures/size-scaling.png
+    name: Size scaling
+    caption: 不同构造下的尺寸标度关系示意图。
