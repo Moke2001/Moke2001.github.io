@@ -64,6 +64,10 @@
       section.setAttribute("aria-hidden", sectionIndex === activeIndex ? "false" : "true");
     });
 
+    if (previousIndex !== activeIndex) {
+      sections[activeIndex].scrollTop = 0;
+    }
+
     dots.forEach((dot, dotIndex) => {
       dot.classList.toggle("is-active", dotIndex === activeIndex);
       dot.setAttribute("aria-current", dotIndex === activeIndex ? "page" : "false");
@@ -101,12 +105,23 @@
     }, 850);
   }
 
+  function canScrollActivePage(direction) {
+    const section = sections[activeIndex];
+    if (!section) return false;
+    const maxScroll = section.scrollHeight - section.clientHeight;
+    if (maxScroll <= 2) return false;
+    if (direction > 0) return section.scrollTop < maxScroll - 2;
+    return section.scrollTop > 2;
+  }
+
   window.addEventListener(
     "wheel",
     event => {
       if (Math.abs(event.deltaY) < 18) return;
+      const direction = event.deltaY > 0 ? 1 : -1;
+      if (canScrollActivePage(direction)) return;
       event.preventDefault();
-      go(event.deltaY > 0 ? 1 : -1);
+      go(direction);
     },
     { passive: false }
   );
@@ -134,7 +149,10 @@
   window.addEventListener("touchend", event => {
     const touchEndY = event.changedTouches[0]?.clientY || 0;
     const delta = touchStartY - touchEndY;
-    if (Math.abs(delta) > 48) go(delta > 0 ? 1 : -1);
+    if (Math.abs(delta) > 48) {
+      const direction = delta > 0 ? 1 : -1;
+      if (!canScrollActivePage(direction)) go(direction);
+    }
   }, { passive: true });
 
   document.addEventListener("click", event => {

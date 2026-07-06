@@ -66,7 +66,9 @@ body.home {
   gap: 24px;
   padding: 0 clamp(18px, 4vw, 56px);
   border-bottom: 0;
-  background: transparent;
+  background: var(--page-background);
+  background-size: auto, 84px 84px, 84px 84px;
+  background-attachment: fixed;
   backdrop-filter: none;
 }
 
@@ -156,6 +158,9 @@ main {
   width: 100%;
   min-height: 100svh;
   padding: calc(var(--header-height) + clamp(34px, 6vw, 78px)) clamp(24px, 7vw, 136px) clamp(48px, 7vw, 104px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   opacity: 0;
   transform: translateY(36px) scale(0.985);
   pointer-events: none;
@@ -875,8 +880,9 @@ p {
 }
 
 .page-dots button.is-active {
-  height: 28px;
-  border-radius: 999px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
   border-color: var(--luojia-green);
   background: var(--luojia-green);
 }
@@ -1519,12 +1525,52 @@ code {
 }
 
 @media (max-width: 520px) {
-  .result-summary {
-    display: none;
-  }
-
   .page-section {
     gap: 18px;
+    align-content: start;
+    padding-top: calc(var(--header-height) + 28px);
+    padding-bottom: 80px;
+  }
+
+  .hero-page {
+    align-content: center;
+  }
+
+  .result-summary {
+    display: block;
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .result-summary > .eyebrow {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .metric-grid div {
+    min-height: 68px;
+    padding: 10px 7px;
+  }
+
+  .metric-grid strong {
+    font-size: 30px;
+  }
+
+  .metric-grid span {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .result-summary .meta {
+    font-size: 12px;
+    line-height: 1.45;
   }
 
   .research-field-card {
@@ -1537,18 +1583,18 @@ code {
   }
 
   .note-panel {
-    max-height: 42svh;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
   }
 
   .profile-card,
   .paper-carousel {
-    max-height: 44svh;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
   }
 
   .research-carousel {
-    max-height: 46svh;
+    max-height: none;
   }
 }
 
