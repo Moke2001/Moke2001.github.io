@@ -1444,7 +1444,7 @@ code {
   }
 
   .research-carousel {
-    min-height: 440px;
+    min-height: 0;
     padding: 0;
   }
 
@@ -1453,7 +1453,21 @@ code {
   }
 
   .research-carousel .paper-track {
-    min-height: 430px;
+    min-height: 0;
+  }
+
+  .research-carousel .paper-slide {
+    position: relative;
+    inset: auto;
+    display: none;
+    opacity: 1;
+    transform: none;
+    pointer-events: none;
+  }
+
+  .research-carousel .paper-slide.is-active {
+    display: flex;
+    pointer-events: auto;
   }
 
   .slide-visual-shell {
@@ -1479,7 +1493,7 @@ code {
 
   .research-carousel .carousel-controls {
     width: calc(100% - 92px);
-    margin-top: 12px;
+    margin-top: 16px;
   }
 
   .slide-caption {
