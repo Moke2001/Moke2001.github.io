@@ -1345,27 +1345,45 @@ code {
 
 @media (max-width: 780px) {
   :root {
-    --header-height: 96px;
+    --header-height: 72px;
   }
 
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    gap: 9px;
-    padding-block: 10px;
+    gap: 12px;
+    padding-block: 8px;
+  }
+
+  .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+    gap: 7px;
+  }
+
+  .brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 24px;
   }
 
   .site-nav {
-    width: 100%;
-    gap: 14px;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    min-width: 0;
+    gap: clamp(10px, 3vw, 16px);
     overflow-x: auto;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
   }
 
   .site-nav a {
     flex: 0 0 auto;
-    font-size: 15px;
+    font-size: clamp(13px, 3.7vw, 15px);
+    white-space: nowrap;
   }
 
   .page-section {
