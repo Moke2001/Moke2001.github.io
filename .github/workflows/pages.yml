@@ -1,0 +1,69 @@
+name: Deploy Eureka Studio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare public files
+        shell: bash
+        run: |
+          set -euo pipefail
+          site_dir="${RUNNER_TEMP}/eureka-studio-pages"
+          mkdir -p "${site_dir}/assets" "${site_dir}/data"
+          cp index.html styles.css app.js .nojekyll "${site_dir}/"
+          cp data/content.js "${site_dir}/data/"
+          while IFS= read -r -d '' asset; do
+            install -D "$asset" "${site_dir}/$asset"
+          done < <(find assets -type f \( \
+            -iname '*.svg' -o -iname '*.png' -o -iname '*.jpg' -o \
+            -iname '*.jpeg' -o -iname '*.webp' -o -iname '*.avif' -o \
+            -iname '*.gif' -o -iname '*.ico' -o -iname '*.woff' -o \
+            -iname '*.css' -o -iname '*.js' -o \
+            -iname '*.woff2' -o -iname '*.ttf' -o -iname '*.otf' -o \
+            -iname '*.pdf' -o -iname '*.zip' -o -iname '*.tex' -o \
+            -iname '*.bib' -o -iname '*.cls' -o -iname '*.sty' -o \
+            -iname '*.tar' -o -iname '*.tar.gz' -o -iname '*.tgz' -o \
+            -iname '*.tar.xz' -o -iname '*.LICENSE' -o -iname 'LICENSE' -o \
+            -iname '*-OFL.txt' \
+          \) -print0)
+          for legacy_dir in papers packages; do
+            if [[ -d "${legacy_dir}" ]]; then
+              cp -a "${legacy_dir}" "${site_dir}/"
+            fi
+          done
+          echo "PAGES_ARTIFACT_DIR=${site_dir}" >> "$GITHUB_ENV"
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ env.PAGES_ARTIFACT_DIR }}
+          include-hidden-files: true
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,17 @@
+# Local preview and inspection artifacts
+/design-qa.md
+/.qa/
+/qa/
+/playwright-report/
+/test-results/
+/.pages-site/
+*.log
+
+# Editor and operating system temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+__pycache__/
+*.pyc
