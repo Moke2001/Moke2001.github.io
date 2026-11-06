@@ -45,3 +45,12 @@ main:focus{outline:none}
   .principle-top{margin-bottom:20px}
   .principle h3,html[lang=en] .principle h3{font-size:22px}
 }
+
+/* Scoped homepage annotation updates. */
+.hero-copy{container-type:inline-size}
+.hero-heading{white-space:nowrap;font-size:clamp(25px,11cqw,68px)}
+html[lang=en] .hero-heading{font-size:clamp(17px,6.2cqw,55px)}
+#vision-title{white-space:nowrap}
+html[lang=en] #vision-title{font-size:clamp(26px,4.6vw,44px)}
+.principles{gap:14px;border:0;box-shadow:none}
+.principles .principle{border:var(--border);box-shadow:4px 4px 0 var(--ink)}
