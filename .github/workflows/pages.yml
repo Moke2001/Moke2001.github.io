@@ -62,7 +62,6 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ${{ env.PAGES_ARTIFACT_DIR }}
-          include-hidden-files: true
 
       - name: Deploy to GitHub Pages
         id: deployment
