@@ -17,6 +17,10 @@ html[lang=en] .hero-heading{font-family:Outfit,sans-serif;font-size:clamp(32px,3
 
 main:focus{outline:none}
 
+.contact-section{display:flex;flex-direction:column;border-bottom:0}
+.contact-section>.section-content{flex:1}
+.contact-section>.site-footer{width:100%;flex-shrink:0;margin-top:auto;background:var(--paper);color:var(--ink);border-top:var(--border);scroll-snap-align:end}
+
 /* Five founding principles, preserving the studio palette. */
 .principles{grid-template-columns:repeat(5,minmax(0,1fr))}
 .principle{padding:25px 22px 28px}

@@ -3,6 +3,7 @@
 (() => {
   const content = window.STUDIO_CONTENT;
   const main = document.querySelector('#main');
+  const siteFooter = document.querySelector('.site-footer');
   const icon = (name, cls = '') => `<img class="icon ${cls}" src="assets/icons/${name}.svg" alt="" width="24" height="24" decoding="async">`;
   const escape = (value = '') => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
   let language = 'zh';
@@ -128,6 +129,8 @@
       if (page === 'home') setupHome();
       else disposeView = () => {};
     }
+    if (page === 'home') document.querySelector('#contact').append(siteFooter);
+    else main.after(siteFooter);
     document.documentElement.classList.toggle('home-route', page === 'home');
     updateShell(); setMenu(false);
     document.querySelectorAll('[data-nav]').forEach(el => {
