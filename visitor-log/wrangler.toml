@@ -1,0 +1,20 @@
+name = "eureka-studio-visitor-log"
+main = "src/index.mjs"
+compatibility_date = "2026-11-10"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "https://moke2001.github.io"
+RETENTION_DAYS = "30"
+
+[observability]
+enabled = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "eureka-studio-visitors"
+database_id = "ae340fe4-577b-45ae-ab25-4dcb53e669bf"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 3 * * *"]

@@ -53,6 +53,10 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 反馈功能把内容保存在访问者当前浏览器的本地存储(localStorage)中, 不会自动发送给工作室, 也不会对其他访问者可见. 邮件入口通过`mailto:`打开默认邮件应用并生成草稿, 需要访问者自行发送. 本站没有留言后端, 公共留言墙或云端收件箱.
 
+## 访客IP记录
+
+访客记录由独立的Cloudflare Worker和私有D1数据库提供, 网站入口仍为GitHub Pages. 部署, 查询及保留期限见[访客记录说明](visitor-log/README.md). 页面通过`assets/visitor-tracker.js`上报规范化路径, IP由Cloudflare服务端取得. `index.html`中该脚本的`data-endpoint`为空时功能关闭, 填入已部署的Worker `/visit` 地址后启用. 数据库和认证文件不随网站发布.
+
 ## 部署到GitHub Pages
 
 1. 在GitHub新建一个仓库, 将本目录的网站文件和`.github/workflows/pages.yml`上传到仓库的`main`分支. 用户主页仓库通常命名为`<用户名>.github.io`, 项目站点可使用其他仓库名.

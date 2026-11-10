@@ -15,3 +15,9 @@ Thumbs.db
 *~
 __pycache__/
 *.pyc
+
+# Visitor log tooling, local databases, and credentials
+/visitor-log/node_modules/
+/visitor-log/.wrangler/
+/visitor-log/.dev.vars*
+/visitor-log/.env*
