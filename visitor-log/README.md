@@ -57,7 +57,7 @@ npm run db:local
 npm run dev -- --var ALLOWED_ORIGIN:http://127.0.0.1:4173
 ```
 
-仅在本地预览时把 tracker 的端点临时设置为 `http://127.0.0.1:8787/visit`. 正式网站只接受 HTTPS 端点, 正式 Worker 的 `ALLOWED_ORIGIN` 保持为 `https://moke2001.github.io`.
+本地预览不会向正式服务发送记录. 若要联调, 临时把 tracker 的端点设置为 `http://127.0.0.1:8787/visit`. 正式网站只接受 HTTPS 端点, 正式 Worker 的 `ALLOWED_ORIGIN` 保持为 `https://moke2001.github.io`.
 
 本地 `.wrangler/` 数据库及认证文件不会进入 Git. GitHub Pages 的发布清单只发布网站静态资产, 不会发布这个目录.
 

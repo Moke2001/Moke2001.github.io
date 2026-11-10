@@ -9,6 +9,7 @@
     endpoint = new URL(configuredEndpoint);
     const localPreview = ['127.0.0.1', 'localhost'].includes(location.hostname)
       && ['127.0.0.1', 'localhost'].includes(endpoint.hostname);
+    if (['127.0.0.1', 'localhost'].includes(location.hostname) && !localPreview) return;
     if ((endpoint.protocol !== 'https:' && !(localPreview && endpoint.protocol === 'http:'))
       || endpoint.username || endpoint.password || endpoint.pathname !== '/visit'
       || endpoint.search || endpoint.hash) return;

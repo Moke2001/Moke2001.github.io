@@ -110,6 +110,18 @@ test('an HTTPS /visit endpoint records the initial page exactly once', () => {
   assert.deepEqual(page.paths(), ['/']);
 });
 
+test('loopback previews never send visits to a production HTTPS endpoint', async t => {
+  for (const hostname of ['localhost', '127.0.0.1']) {
+    await t.test(hostname, () => {
+      const page = browser({ url: `http://${hostname}:4173/#/`, endpoint });
+      page.navigate('#/research');
+      page.navigate('#/projects/tool-a');
+      page.back();
+      assert.equal(page.requests.length, 0);
+    });
+  }
+});
+
 test('HTTP is accepted only when both the page and endpoint are loopback previews', async t => {
   for (const pageHost of ['localhost', '127.0.0.1']) {
     for (const endpointHost of ['localhost', '127.0.0.1']) {
