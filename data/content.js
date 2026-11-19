@@ -282,6 +282,7 @@ window.STUDIO_CONTENT = {
         en: 'Evaluates the ability of large language models to conduct physics research through quantum ground-state calculations.'
       },
       field: { zh: '量子多体', en: 'Quantum many-body physics' },
+      hideFieldOnCard: true,
       date: 'v1.3.0',
       github: 'https://github.com/Moke2001/SeekGnomes',
       download: 'https://github.com/Moke2001/SeekGnomes/releases/download/v1.3.0/seekgnomes-v1.3.0-public-build-context.tar.gz',
