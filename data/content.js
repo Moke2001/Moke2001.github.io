@@ -242,6 +242,8 @@ window.STUDIO_CONTENT = {
   //   date: '2026.11',
   //   github: 'https://github.com/owner/repository',
   //   zip: 'assets/projects/project.zip', // Relative path or HTTPS URL.
+  //   download: 'https://github.com/owner/repository/releases/download/v1.0/package.tar.gz',
+  //   quantumPage: './quantum/project/', // Include this project on Quantum Cloud.
   //   motivation: { zh: '项目动机', en: 'Project motivation' },
   //   value: { zh: '项目价值', en: 'Project value' },
   //   innovation: { zh: '创新之处', en: 'Innovation' }
@@ -271,6 +273,19 @@ window.STUDIO_CONTENT = {
         zh: '围绕费米与玻色量子纠错组织Python工具, 将纠错码构造及参数计算与基于蒙特卡洛模拟的电路评估衔接起来.',
         en: 'The package organizes fermionic and bosonic quantum error correction around a workflow connecting code construction and parameter computation with Monte Carlo circuit evaluation.'
       }
+    },
+    {
+      id: 'seekgnomes',
+      title: 'SeekGnomes',
+      summary: {
+        zh: '基于量子基态计算评估大语言模型在物理研究方面的能力.',
+        en: 'Evaluates the ability of large language models to conduct physics research through quantum ground-state calculations.'
+      },
+      field: { zh: '量子多体', en: 'Quantum many-body physics' },
+      date: 'v1.3.0',
+      github: 'https://github.com/Moke2001/SeekGnomes',
+      download: 'https://github.com/Moke2001/SeekGnomes/releases/download/v1.3.0/seekgnomes-v1.3.0-public-build-context.tar.gz',
+      quantumPage: './quantum/seekgnomes/'
     }
   ]
 };

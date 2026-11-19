@@ -1,5 +1,5 @@
-import {renderTotalChart,renderMetricChart} from './charts.js';
-import {getLanguage,setLanguage,t,applyStaticTranslations} from './i18n.js';
+import {renderTotalChart,renderMetricChart} from './charts.js?v=20';
+import {getLanguage,setLanguage,t,applyStaticTranslations} from './i18n.js?v=20';
 import {mathElement,typesetMath} from './math.js';
 import {modelHamiltonian} from './model-math.js';
 import {createCyclicCarousel} from './carousel.js';

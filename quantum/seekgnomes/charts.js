@@ -1,6 +1,6 @@
 /* Historical leaderboard charts. Scores are supplied by the data snapshot;
  * this module only maps values to fixed axes and never re-scores a trial. */
-import {t} from './i18n.js';
+import {t} from './i18n.js?v=20';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const FONT = 'Outfit, system-ui, sans-serif';
 const INK = '#193640';

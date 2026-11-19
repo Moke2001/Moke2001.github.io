@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="./styles.css?v=18">
   <link rel="stylesheet" href="./leaderboard.css">
   <link rel="stylesheet" href="./model-library.css">
-  <script src="./config.js"></script>
+  <script src="./config.js?v=20"></script>
   <script defer src="./hero-orbits.js?v=16"></script>
-  <script type="module" src="./main.js?v=19"></script>
+  <script type="module" src="./main.js?v=20"></script>
 </head>
 <body class="sg-body">
   <a class="sg-skip" href="#main" data-i18n="skipContent">Skip to content</a>
@@ -85,7 +85,7 @@
 
     <section class="sg-section sg-wrap sg-start" id="start" aria-labelledby="start-title">
       <div class="sg-section-heading"><div><h2 id="start-title" data-i18n="getStarted">Get started</h2></div><span class="sg-release-status"><span></span><span data-i18n="releaseVersion">v1.3.0</span></span></div>
-      <div class="sg-start-grid"><div class="sg-start-main"><p class="sg-start-intro" data-i18n="startIntro">Download the build-context parts from the release and follow BUILD.md to restore the archive and build the container image.</p>
+      <div class="sg-start-grid"><div class="sg-start-main">
         <ol class="sg-steps"><li><span>01</span><div><h3 data-i18n="environmentStep">Check your environment</h3><p data-i18n="environmentText">Linux amd64 containers, at least 2 available CPU cores and 12 GiB available memory. A GPU is not required.</p></div></li><li><span>02</span><div><h3 data-i18n="configureStep">Configure your LLM</h3><p data-i18n="configureText">Enter your model ID, API endpoint and API key on your machine.</p></div></li><li><span>03</span><div><h3 data-i18n="inspectStep">Run &amp; inspect</h3><p data-i18n="inspectText">Keep definitions, proofs, verifier logs, energies and resource records. The report separates complete results from technical gaps.</p></div></li></ol>
         <div class="sg-code"><div class="sg-code-top"><span data-i18n="localTerminal">Local terminal · after building the image</span><button type="button" id="copy-commands" aria-label="Copy example commands" data-i18n-aria-label="copyCommands"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg><span data-i18n="copy">Copy</span></button></div><pre><code id="example-commands"><span class="sg-code-comment" data-i18n="commandCheck"># Check the environment and verifier, without a model API call</span>
 ./seekgnomes doctor
@@ -94,8 +94,7 @@
 <span class="sg-code-comment" data-i18n="commandConfigure"># Enter your API endpoint, model ID and key interactively</span>
 ./seekgnomes</code></pre></div>
         <div class="sg-release-actions"><button class="sg-button sg-pending" type="button" data-resource="download" disabled><span data-i18n="downloadPackage">Download package</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></button></div>
-        <p class="sg-fine-print" data-i18n="communityNote">A community result will need its source definitions, proofs and evaluation records, followed by independent verification before inclusion.</p>
-      </div><aside class="sg-citation" aria-labelledby="citation-title"><div class="sg-citation-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7H4v6h5c0 4-3 5-5 5M20 7h-6v6h5c0 4-3 5-5 5"/></svg></div><h3 id="citation-title" data-i18n="citeTitle">Cite SeekGnomes</h3><p data-i18n="citeRepository">Cite the SeekGnomes software release on GitHub.</p><div class="sg-bib-placeholder" aria-label="SeekGnomes BibTeX citation" data-i18n-aria-label="citationBibtex"><span>BibTeX</span><pre id="citation-content">—</pre></div><button class="sg-text-button" type="button" data-resource="citation" disabled><span data-i18n="copyCitation">Copy citation</span> <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg></button></aside></div>
+      </div><aside class="sg-citation" aria-labelledby="citation-title"><div class="sg-citation-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 7H4v6h5c0 4-3 5-5 5M20 7h-6v6h5c0 4-3 5-5 5"/></svg></div><h3 id="citation-title" data-i18n="citeTitle">Cite SeekGnomes</h3><p data-i18n="citeRepository">If you use this project, please consider citing us using the format below.</p><div class="sg-bib-placeholder" aria-label="SeekGnomes BibTeX citation" data-i18n-aria-label="citationBibtex"><span>BibTeX</span><pre id="citation-content">—</pre></div><button class="sg-text-button" type="button" data-resource="citation" disabled><span data-i18n="copyCitation">Copy citation</span> <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></svg></button></aside></div>
     </section>
   </main>
   <footer class="sg-footer"><div class="sg-wrap"><a href="https://moke2001.github.io/#/">Eureka Studio <span>© 2026</span></a><span data-i18n="footerProject">Quantum Cloud / SeekGnomes</span></div></footer>

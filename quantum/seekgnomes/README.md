@@ -20,7 +20,7 @@ Then visit `http://127.0.0.1:8080/`. Double-clicking the unpacked `index.html` a
 - `carousel.js`: a cyclic native-scroll strip. The last family leads directly to the first; identical offscreen copies are rebased without a rewind animation.
 - `model-math.js`, `math.js`: conventional operator Hamiltonians and locally rendered LaTeX. Exact cell densities remain expandable.
 - `data/model-translations.json`: Chinese names, descriptions and lattice conventions for all 50 tasks.
-- `config.js`: GitHub repository and release URLs, BibTeX citation and parent navigation.
+- `config.js`: GitHub repository and package download URLs, BibTeX citation and parent navigation.
 - `data/leaderboard.json`: the 2026-11-13 `composite_v1` snapshot for the five complete families. Scores are retained, not recalculated under the revised scoring protocol.
 - `data/models.json`: all 50 frozen physical model definitions and family descriptions.
 - `assets/illustrations/`: editable scientific SVG diagrams and reusable quantum-lattice symbols. The bilingual overview uses the supplied TCSExam Figure 1 panel layout, with original model illustrations and SeekGnomes workflow content.
@@ -40,7 +40,7 @@ The distributed `hero-orbits.js` starts the simulation independently of the rest
 
 The old rank is ten tasks, five trials each, without web access. It is separate from the current two-role framework and the 50-task catalogue. P/R/A definitions and the original R threshold on I=(B−U)/s remain recorded in `data/leaderboard.json`. The generic family labels and the model drawings do not assert exact solutions for every task. Every model’s frozen parameters, Pauli terms, sources and identity hash can be inspected.
 
-The download opens the v1.3.0 release with its build-context parts, recovery scripts and build instructions. The BibTeX entry cites the software on GitHub. The arXiv control shows the publication status.
+The download retrieves the complete v1.3.0 build-context archive. See `BUILD.md` in the archive for build instructions. The BibTeX entry cites the software on GitHub. The arXiv control shows the publication status.
 
 ## Integration with Studio
 

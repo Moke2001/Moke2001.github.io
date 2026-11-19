@@ -5,10 +5,10 @@ window.SEEKGNOMES_CONFIG = {
   links: {
     github: 'https://github.com/Moke2001/SeekGnomes',
     arxiv: null,
-    download: 'https://github.com/Moke2001/SeekGnomes/releases/tag/v1.3.0',
+    download: 'https://github.com/Moke2001/SeekGnomes/releases/download/v1.3.0/seekgnomes-v1.3.0-public-build-context.tar.gz',
   },
   citation: `@misc{seekgnomes2026,
-  author       = {{Moke2001}},
+  author       = {{Hsu Mooke}},
   title        = {{SeekGnomes}},
   year         = {2026},
   howpublished = {GitHub repository},
