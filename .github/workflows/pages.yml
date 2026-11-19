@@ -51,9 +51,9 @@ jobs:
             -iname '*.tar.xz' -o -iname '*.LICENSE' -o -iname 'LICENSE' -o \
             -iname '*-OFL.txt' \
           \) -print0)
-          for legacy_dir in papers packages; do
-            if [[ -d "${legacy_dir}" ]]; then
-              cp -a "${legacy_dir}" "${site_dir}/"
+          for public_dir in papers packages quantum; do
+            if [[ -d "${public_dir}" ]]; then
+              cp -a "${public_dir}" "${site_dir}/"
             fi
           done
           echo "PAGES_ARTIFACT_DIR=${site_dir}" >> "$GITHUB_ENV"

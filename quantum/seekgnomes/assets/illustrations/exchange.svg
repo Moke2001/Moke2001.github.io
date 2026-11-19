@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title description">
+  <title id="title">Exchange interactions and geometric frustration</title>
+  <desc id="description">A triangular lattice fragment highlights a three-bond loop. Three directions illustrate a frustrated arrangement without claiming an exact quantum state. Dotted bonds indicate continuation.</desc>
+  <defs><marker id="spin" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0 5 2.5 0 5Z" fill="#e28b56"/></marker></defs>
+  <g stroke="#d5dde2" stroke-width="1.25" fill="none"><path d="M40 28H280M16 70H304M40 112H280M40 28 88 112 136 28 184 112 232 28 280 112M40 112 88 28 136 112 184 28 232 112 280 28M16 70 40 28M280 28 304 70M16 70 40 112M280 112 304 70"/><path d="M6 28H35M285 28H314M6 112H35M285 112H314" stroke-dasharray="2 5"/></g>
+  <path d="M136 28 112 70 160 70Z" fill="#fdf2e9" stroke="#e28b56" stroke-width="2"/>
+  <g fill="#fff" stroke="#a6b7c3" stroke-width="1.4"><circle cx="40" cy="28" r="3.5"/><circle cx="88" cy="28" r="3.5"/><circle cx="184" cy="28" r="3.5"/><circle cx="232" cy="28" r="3.5"/><circle cx="280" cy="28" r="3.5"/><circle cx="64" cy="70" r="3.5"/><circle cx="208" cy="70" r="3.5"/><circle cx="256" cy="70" r="3.5"/><circle cx="40" cy="112" r="3.5"/><circle cx="88" cy="112" r="3.5"/><circle cx="136" cy="112" r="3.5"/><circle cx="184" cy="112" r="3.5"/><circle cx="232" cy="112" r="3.5"/><circle cx="280" cy="112" r="3.5"/></g>
+  <g fill="#e28b56"><circle cx="136" cy="28" r="4.5"/><circle cx="112" cy="70" r="4.5"/><circle cx="160" cy="70" r="4.5"/></g>
+  <g stroke="#e28b56" stroke-width="1.8" marker-end="url(#spin)"><path d="M136 25V10"/><path d="M109 72 96 80"/><path d="M163 72 176 80"/></g>
+</svg>

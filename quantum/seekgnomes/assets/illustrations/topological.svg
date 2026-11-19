@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title description">
+  <title id="title">Star and plaquette terms in a toric-code lattice</title>
+  <desc id="description">Qubits sit on lattice edges. A green star term highlights four edges meeting at a vertex, and an orange plaquette term highlights a square face. Dotted boundaries indicate an infinite lattice, not a finite torus.</desc>
+  <path d="M160 22H208V70H160Z" fill="#fdf1e6"/>
+  <g stroke="#cbd8dc" stroke-width="1.2" fill="none"><path d="M40 22H280M40 70H280M40 118H280M64 10V130M112 10V130M160 10V130M208 10V130M256 10V130"/><path d="M18 22H40M280 22H302M18 70H40M280 70H302M18 118H40M280 118H302" stroke-dasharray="2 5"/></g>
+  <path d="M64 70H160M112 22V118" fill="none" stroke="#129184" stroke-width="2.3"/>
+  <path d="M160 22H208V70H160Z" fill="none" stroke="#e28b56" stroke-width="2.3"/>
+  <g fill="#9fb4bd"><circle cx="88" cy="22" r="3"/><circle cx="136" cy="22" r="3"/><circle cx="232" cy="22" r="3"/><circle cx="232" cy="70" r="3"/><circle cx="88" cy="118" r="3"/><circle cx="136" cy="118" r="3"/><circle cx="184" cy="118" r="3"/><circle cx="232" cy="118" r="3"/><circle cx="64" cy="46" r="3"/><circle cx="112" cy="46" r="3"/><circle cx="256" cy="46" r="3"/><circle cx="64" cy="94" r="3"/><circle cx="160" cy="94" r="3"/><circle cx="208" cy="94" r="3"/><circle cx="256" cy="94" r="3"/></g>
+  <g fill="#129184"><circle cx="88" cy="70" r="4.5"/><circle cx="136" cy="70" r="4.5"/><circle cx="112" cy="46" r="4.5"/><circle cx="112" cy="94" r="4.5"/></g>
+  <g fill="#e28b56"><circle cx="184" cy="22" r="4.5"/><circle cx="208" cy="46" r="4.5"/><circle cx="184" cy="70" r="4.5"/><circle cx="160" cy="46" r="4.5"/></g>
+  <text x="112" y="65" fill="#129184" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11">A</text>
+  <text x="184" y="50" fill="#b57343" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11">B</text>
+</svg>

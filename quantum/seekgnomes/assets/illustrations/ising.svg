@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title description">
+  <title id="title">Ising interactions on an infinite square lattice</title>
+  <desc id="description">A schematic window into a square qubit lattice. Blue arrows illustrate spins, while a transverse arrow illustrates a field. Dotted extensions indicate that the model continues beyond the drawing.</desc>
+  <defs><marker id="spin" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0 5 2.5 0 5Z" fill="#236b99"/></marker><marker id="field" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><path d="M0 0 5 2.5 0 5Z" fill="#e28b56"/></marker></defs>
+  <g stroke="#c7d7e2" stroke-width="1.25" fill="none"><path d="M40 28H280M40 70H280M40 112H280M64 14V126M112 14V126M160 14V126M208 14V126M256 14V126"/><path d="M22 28H40M280 28H298M22 70H40M280 70H298M22 112H40M280 112H298" stroke-dasharray="2 5"/></g>
+  <g fill="#fff" stroke="#7da8c4" stroke-width="1.5"><circle cx="64" cy="28" r="4"/><circle cx="112" cy="28" r="4"/><circle cx="160" cy="28" r="4"/><circle cx="208" cy="28" r="4"/><circle cx="256" cy="28" r="4"/><circle cx="64" cy="70" r="4"/><circle cx="112" cy="70" r="4"/><circle cx="160" cy="70" r="5" fill="#236b99"/><circle cx="208" cy="70" r="4"/><circle cx="256" cy="70" r="4"/><circle cx="64" cy="112" r="4"/><circle cx="112" cy="112" r="4"/><circle cx="160" cy="112" r="4"/><circle cx="208" cy="112" r="4"/><circle cx="256" cy="112" r="4"/></g>
+  <g stroke="#236b99" stroke-width="1.7" marker-end="url(#spin)"><path d="M112 80V54"/><path d="M208 80V54"/><path d="M160 39V13"/><path d="M160 122V96"/></g>
+  <path d="M172 70H191" stroke="#e28b56" stroke-width="1.7" marker-end="url(#field)"/>
+</svg>

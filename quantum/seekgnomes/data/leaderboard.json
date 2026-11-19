@@ -1,0 +1,659 @@
+{
+  "schema": "seekgnomes.website.leaderboard/v1",
+  "title": "LLM rank",
+  "snapshot_date": "2026-11-13",
+  "snapshot_label": "Historical 10-task evaluation",
+  "scoring_version": "composite_v1",
+  "post_hoc_exploratory": true,
+  "task_ids": [
+    "01",
+    "07",
+    "08",
+    "13",
+    "17",
+    "22",
+    "25",
+    "34",
+    "39",
+    "48"
+  ],
+  "task_count": 10,
+  "trials_per_task": 5,
+  "trials_per_model": 50,
+  "total_scientific_trials": 250,
+  "web_access": false,
+  "complete_model_count": 5,
+  "score_range": [
+    0,
+    100
+  ],
+  "metric_units": {
+    "score": "points out of 100",
+    "pass_rate": "fraction in [0,1]",
+    "improvement_rate": "fraction in [0,1]",
+    "amplitude_mean": "fraction in [0,1]",
+    "ci95": "score points"
+  },
+  "definitions": {
+    "S": "30 P + 30 R + 40 A",
+    "P": "Fraction of trials with at least one certified legal state and energy upper bound within the original run budget.",
+    "R": "Fraction of trials with original I = max(0, (B-U)/s) >= 0.01. This is not a threshold on A.",
+    "A": "Mean of max(0, (B-U)/(B-L)) over all 50 scientific outcomes per model, including zero for scientific outcomes with no certified state.",
+    "B": "Frozen public baseline energy upper bound.",
+    "U": "Best certified upper bound obtained within the selected run's budget.",
+    "L": "Frozen rigorous algebraic lower bound, not an exact ground-state energy.",
+    "s": "Sum of absolute nonidentity Pauli coefficients per physical qubit."
+  },
+  "caption": "Historical results on 10 fixed tasks with five trials per task and no web access. Bars show S = 30P + 30R + 40A; whiskers show within-task bootstrap 95% intervals. Only models with all 50 scientific outcomes are included.",
+  "bootstrap": {
+    "resamples": 10000,
+    "base_seed": 20261110,
+    "population": "Fixed ten tasks, independently resample five repeats within each task",
+    "joint_trial_utility": true,
+    "family_seed": "numpy SeedSequence([base_seed,int(sha256(family)[:8],16)])",
+    "percentiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_method": "linear",
+    "cross_model_samples": "Independent family RNG streams; trial numbers are not paired experiments",
+    "excludes": "Task-selection uncertainty, runtime/deployment differences, and uncertainty in physical interpretation of provider token accounting"
+  },
+  "limitations": [
+    "This historical composite_v1 snapshot is not scored with the revised exact-energy rule or the newer two-agent protocol.",
+    "These are results on ten fixed tasks, not completed evaluations on all 50 models in the physical-model library.",
+    "The score is a task-specific research utility measure, not state fidelity or a fraction of the true ground-state error removed.",
+    "Technical failures are not imputed as zero; incomplete model families are excluded.",
+    "GLM-5.3 combines 49 bh2 trials and one infi trial. Technical retry policies and runtime versions also differ among families.",
+    "Bootstrap intervals condition on the fixed ten tasks and omit task-selection and deployment uncertainty.",
+    "The MiMo minus GLM score difference has a 95% bootstrap interval of [-1.8, 4.2], so their point-estimate order is not a robust separation."
+  ],
+  "excluded_models": [
+    "grok",
+    "gemini",
+    "claude"
+  ],
+  "exclusion_note": "Grok and Gemini lack complete scientific coverage; Claude was excluded by the human.",
+  "models": [
+    {
+      "family": "gpt",
+      "label": "GPT-6 Astra",
+      "rank": 1,
+      "n": 50,
+      "task_count": 10,
+      "pass_count": 50,
+      "improvement_count": 31,
+      "pass_rate": 1.0,
+      "improvement_rate": 0.62,
+      "amplitude_mean": 0.11458333333333333,
+      "original_mean_I": 0.10035714285714285,
+      "score": 53.18333333333333,
+      "ci95": [
+        50.738888888888894,
+        55.40555555555556
+      ],
+      "contributions": {
+        "pass": 30.0,
+        "improvement": 18.6,
+        "amplitude": 4.583333333333333
+      },
+      "deployment_counts": {
+        "gpt-6-astra": 50
+      },
+      "mixed_deployments": false,
+      "task_metrics": [
+        {
+          "task_id": "01",
+          "p": 1.0,
+          "r": 0.6,
+          "a": 0.15,
+          "I": 0.075,
+          "score": 54.0
+        },
+        {
+          "task_id": "07",
+          "p": 1.0,
+          "r": 0.8,
+          "a": 0.13333333333333333,
+          "I": 0.13333333333333333,
+          "score": 59.333333333333336
+        },
+        {
+          "task_id": "08",
+          "p": 1.0,
+          "r": 1.0,
+          "a": 0.5,
+          "I": 0.5,
+          "score": 80.0
+        },
+        {
+          "task_id": "13",
+          "p": 1.0,
+          "r": 1.0,
+          "a": 0.0625,
+          "I": 0.025,
+          "score": 62.5
+        },
+        {
+          "task_id": "17",
+          "p": 1.0,
+          "r": 1.0,
+          "a": 0.16666666666666666,
+          "I": 0.16666666666666666,
+          "score": 66.66666666666667
+        },
+        {
+          "task_id": "22",
+          "p": 1.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 30.0
+        },
+        {
+          "task_id": "25",
+          "p": 1.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 30.0
+        },
+        {
+          "task_id": "34",
+          "p": 1.0,
+          "r": 0.8,
+          "a": 0.022222222222222223,
+          "I": 0.008333333333333333,
+          "score": 54.888888888888886
+        },
+        {
+          "task_id": "39",
+          "p": 1.0,
+          "r": 1.0,
+          "a": 0.1111111111111111,
+          "I": 0.09523809523809523,
+          "score": 64.44444444444444
+        },
+        {
+          "task_id": "48",
+          "p": 1.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 30.0
+        }
+      ],
+      "display_label": "GPT-6 Astra",
+      "pass_percent": 100.0,
+      "improvement_percent": 62.0,
+      "amplitude_percent": 11.458333333333332,
+      "note": ""
+    },
+    {
+      "family": "kimi",
+      "label": "Kimi K3.1 Pro",
+      "rank": 2,
+      "n": 50,
+      "task_count": 10,
+      "pass_count": 34,
+      "improvement_count": 19,
+      "pass_rate": 0.68,
+      "improvement_rate": 0.38,
+      "amplitude_mean": 0.05795375899963816,
+      "original_mean_I": 0.04583281353961642,
+      "score": 34.11815035998553,
+      "ci95": [
+        27.264656833176964,
+        41.01278938018256
+      ],
+      "contributions": {
+        "pass": 20.4,
+        "improvement": 11.4,
+        "amplitude": 2.318150359985526
+      },
+      "deployment_counts": {
+        "bh2/kimi-k3.1-pro": 50
+      },
+      "mixed_deployments": false,
+      "task_metrics": [
+        {
+          "task_id": "01",
+          "p": 0.6,
+          "r": 0.6,
+          "a": 0.1499999996822916,
+          "I": 0.0749999998411458,
+          "score": 41.999999987291666
+        },
+        {
+          "task_id": "07",
+          "p": 0.4,
+          "r": 0.2,
+          "a": 0.022222222222222223,
+          "I": 0.022222222222222223,
+          "score": 18.88888888888889
+        },
+        {
+          "task_id": "08",
+          "p": 0.6,
+          "r": 0.6,
+          "a": 0.23092787897524622,
+          "I": 0.23092787897524622,
+          "score": 45.237115159009846
+        },
+        {
+          "task_id": "13",
+          "p": 0.6,
+          "r": 0.6,
+          "a": 0.03749951374315172,
+          "I": 0.014999805497260687,
+          "score": 37.49998054972607
+        },
+        {
+          "task_id": "17",
+          "p": 0.8,
+          "r": 0.4,
+          "a": 0.06666666666666667,
+          "I": 0.06666666666666667,
+          "score": 38.666666666666664
+        },
+        {
+          "task_id": "22",
+          "p": 0.6,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 18.0
+        },
+        {
+          "task_id": "25",
+          "p": 1.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 30.0
+        },
+        {
+          "task_id": "34",
+          "p": 1.0,
+          "r": 1.0,
+          "a": 0.02777686426235865,
+          "I": 0.010416324098384494,
+          "score": 61.111074570494345
+        },
+        {
+          "task_id": "39",
+          "p": 0.4,
+          "r": 0.4,
+          "a": 0.044444444444444446,
+          "I": 0.0380952380952381,
+          "score": 25.77777777777778
+        },
+        {
+          "task_id": "48",
+          "p": 0.8,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 24.0
+        }
+      ],
+      "display_label": "Kimi K3.1 Pro",
+      "pass_percent": 68.0,
+      "improvement_percent": 38.0,
+      "amplitude_percent": 5.795375899963815,
+      "note": ""
+    },
+    {
+      "family": "deepseek",
+      "label": "DeepSeek V4 Pro",
+      "rank": 3,
+      "n": 50,
+      "task_count": 10,
+      "pass_count": 23,
+      "improvement_count": 0,
+      "pass_rate": 0.46,
+      "improvement_rate": 0.0,
+      "amplitude_mean": 0.0,
+      "original_mean_I": 0.0,
+      "score": 13.8,
+      "ci95": [
+        10.2,
+        17.4
+      ],
+      "contributions": {
+        "pass": 13.8,
+        "improvement": 0.0,
+        "amplitude": 0.0
+      },
+      "deployment_counts": {
+        "ora/deepseek-v4-pro-0813": 50
+      },
+      "mixed_deployments": false,
+      "task_metrics": [
+        {
+          "task_id": "01",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        },
+        {
+          "task_id": "07",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        },
+        {
+          "task_id": "08",
+          "p": 0.6,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 18.0
+        },
+        {
+          "task_id": "13",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        },
+        {
+          "task_id": "17",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        },
+        {
+          "task_id": "22",
+          "p": 0.6,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 18.0
+        },
+        {
+          "task_id": "25",
+          "p": 1.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 30.0
+        },
+        {
+          "task_id": "34",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "39",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "48",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        }
+      ],
+      "display_label": "DeepSeek V4 Pro",
+      "pass_percent": 46.0,
+      "improvement_percent": 0.0,
+      "amplitude_percent": 0.0,
+      "note": ""
+    },
+    {
+      "family": "mimo",
+      "label": "MiMo V2.6 Pro",
+      "rank": 4,
+      "n": 50,
+      "task_count": 10,
+      "pass_count": 6,
+      "improvement_count": 0,
+      "pass_rate": 0.12,
+      "improvement_rate": 0.0,
+      "amplitude_mean": 0.0,
+      "original_mean_I": 0.0,
+      "score": 3.6,
+      "ci95": [
+        1.2,
+        6.0
+      ],
+      "contributions": {
+        "pass": 3.6,
+        "improvement": 0.0,
+        "amplitude": 0.0
+      },
+      "deployment_counts": {
+        "bh2/mimo-v2.6-pro": 50
+      },
+      "mixed_deployments": false,
+      "task_metrics": [
+        {
+          "task_id": "01",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "07",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "08",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "13",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "17",
+          "p": 0.6,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 18.0
+        },
+        {
+          "task_id": "22",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "25",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "34",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "39",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "48",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        }
+      ],
+      "display_label": "MiMo V2.6 Pro",
+      "pass_percent": 12.0,
+      "improvement_percent": 0.0,
+      "amplitude_percent": 0.0,
+      "note": ""
+    },
+    {
+      "family": "glm",
+      "label": "GLM-5.3*",
+      "rank": 5,
+      "n": 50,
+      "task_count": 10,
+      "pass_count": 4,
+      "improvement_count": 0,
+      "pass_rate": 0.08,
+      "improvement_rate": 0.0,
+      "amplitude_mean": 0.0,
+      "original_mean_I": 0.0,
+      "score": 2.4,
+      "ci95": [
+        0.6,
+        4.2
+      ],
+      "contributions": {
+        "pass": 2.4,
+        "improvement": 0.0,
+        "amplitude": 0.0
+      },
+      "deployment_counts": {
+        "bh2/glm-5.3": 49,
+        "infi/glm-5.3": 1
+      },
+      "mixed_deployments": true,
+      "task_metrics": [
+        {
+          "task_id": "01",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "07",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "08",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "13",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "17",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "22",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "25",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "34",
+          "p": 0.2,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 6.0
+        },
+        {
+          "task_id": "39",
+          "p": 0.0,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 0.0
+        },
+        {
+          "task_id": "48",
+          "p": 0.4,
+          "r": 0.0,
+          "a": 0.0,
+          "I": 0.0,
+          "score": 12.0
+        }
+      ],
+      "display_label": "GLM-5.3",
+      "pass_percent": 8.0,
+      "improvement_percent": 0.0,
+      "amplitude_percent": 0.0,
+      "note": "Mixed deployment: 49 bh2/glm-5.3 + 1 infi/glm-5.3."
+    }
+  ],
+  "source": {
+    "ranking": "results/benchmark10-complete-ranking-20261113/ranking.json",
+    "ranking_sha256": "c5cdb2d41c4eb4501501444f38e2d5eea9f12750b4180c6fcca382a6189e04de",
+    "score_spec": "results/benchmark10-complete-ranking-20261113/score-spec.json",
+    "score_spec_sha256": "f6d10cfc4e389d2f33a6cc5a5baa369d73a1941ed7a4933b61976f0716a1b6c8",
+    "protocol": "BENCHMARK10_PROTOCOL.md",
+    "protocol_sha256": "f4626b911521987ca7ae28e3cf38d3e76447d58a0893cb0e6d11ea6eed40809f",
+    "source_created_utc": "2026-11-13T12:31:28.957222+00:00"
+  }
+}

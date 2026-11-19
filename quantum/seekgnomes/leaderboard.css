@@ -1,0 +1,297 @@
+/* One scientific figure: the composite score and its three component plots. */
+#leaderboard {
+  --rank-ink: #193640;
+  --rank-muted: #556b73;
+  --rank-accent: #176d77;
+  --rank-rule: #d5e0e1;
+  --rank-paper: #f6f9f8;
+}
+
+.sg-chart-toolbar {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+  margin: 0;
+}
+.sg-chart-toolbar .sg-snapshot { white-space: nowrap; max-width: none; padding: 0; }
+@media (max-width: 620px) {
+  #leaderboard .sg-section-heading { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .sg-section-heading .sg-chart-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.sg-view-toggle {
+  padding: 2px;
+  border: 1px solid var(--rank-rule);
+  border-radius: 6px;
+  background: var(--rank-paper);
+}
+
+.sg-view-toggle button {
+  min-height: 35px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  color: var(--rank-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.sg-view-toggle button.active {
+  box-shadow: none;
+  background: #215e67;
+  color: #fff;
+}
+
+.sg-view-toggle button:not(.active):hover {
+  background: #e4edec;
+  color: var(--rank-ink);
+}
+
+.sg-rank-charts {
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr);
+  align-items: stretch;
+  gap: 0;
+  background: #fff;
+  border-block: 1px solid var(--rank-rule);
+}
+
+.sg-rank-charts > .sg-total-chart {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px clamp(20px, 2.3vw, 34px) 12px 0;
+}
+
+.sg-total-chart .sg-plot-heading {
+  padding-left: 0;
+  margin-bottom: 18px;
+}
+
+.sg-plot-heading {
+  color: var(--rank-ink);
+}
+
+.sg-plot-heading h3 {
+  font-size: 17px;
+  font-weight: 560;
+}
+
+.sg-plot-heading > span {
+  color: var(--rank-muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+#total-chart {
+  margin-block: auto;
+}
+
+.sg-chart {
+  font-variant-numeric: tabular-nums;
+}
+
+.sg-chart-model:focus-visible {
+  outline: 2px solid var(--rank-accent);
+}
+
+.sg-chart-model > text:first-of-type {
+  paint-order: stroke fill;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.sg-subcharts {
+  gap: 0;
+  border-left: 1px solid var(--rank-rule);
+  padding: 6px clamp(14px, 1.9vw, 28px);
+  background: var(--rank-paper);
+}
+
+.sg-subcharts figure {
+  min-width: 0;
+  padding-block: 13px 10px;
+}
+
+.sg-subcharts figure + figure {
+  padding-top: 13px;
+  border-top: 1px solid var(--rank-rule);
+}
+
+.sg-subcharts .sg-plot-heading h3 {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.sg-component-letter {
+  display: inline-block;
+  min-width: 1.1em;
+  margin-right: 5px;
+  color: var(--rank-accent);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sg-rank-caption {
+  max-width: 90ch;
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--rank-muted);
+}
+
+.sg-table-scroll {
+  border-block: 1px solid var(--rank-rule);
+  scrollbar-width: thin;
+}
+
+.sg-table-scroll table {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--rank-ink);
+}
+
+.sg-table-scroll th,
+.sg-table-scroll td {
+  text-align: right;
+  padding: 14px 16px;
+}
+
+.sg-table-scroll :is(th, td):nth-child(-n+2) {
+  text-align: left;
+}
+
+.sg-table-scroll th {
+  background: var(--rank-paper);
+  color: var(--rank-muted);
+  font-size: 12px;
+  font-weight: 520;
+}
+
+.sg-table-scroll td {
+  border-top-color: var(--rank-rule);
+}
+
+.sg-table-scroll td:first-child {
+  color: var(--rank-muted);
+}
+
+.sg-table-scroll td:nth-child(3) {
+  color: var(--rank-accent);
+  font-weight: 650;
+}
+
+.sg-table-scroll tr.sg-selected td {
+  background: #e7f2ef;
+}
+
+.sg-table-scroll tr:focus-visible {
+  outline: 2px solid var(--rank-accent);
+  outline-offset: -2px;
+}
+
+@media (max-width: 860px) {
+  .sg-rank-charts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sg-rank-charts > .sg-total-chart {
+    padding: 19px 0 7px;
+  }
+
+  #total-chart {
+    width: min(100%, 590px);
+    margin-inline: auto;
+  }
+
+  .sg-subcharts {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 clamp(12px, 2.5vw, 22px);
+    border-left: 0;
+    border-top: 1px solid var(--rank-rule);
+  }
+
+  .sg-subcharts figure {
+    display: grid;
+    grid-template-columns: minmax(135px, 0.6fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sg-subcharts .sg-plot-heading {
+    display: block;
+  }
+
+  .sg-subcharts .sg-plot-heading h3 {
+    min-height: 0;
+    line-height: 1.45;
+  }
+
+  .sg-subcharts .sg-plot-heading > span {
+    display: block;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sg-view-toggle button {
+    min-height: 34px;
+    padding-inline: 13px;
+    font-size: 12px;
+  }
+
+  .sg-subcharts figure {
+    display: block;
+  }
+
+  .sg-subcharts .sg-plot-heading {
+    display: flex;
+  }
+
+  .sg-subcharts .sg-plot-heading > span {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .sg-table-scroll :is(th, td) {
+    padding: 12px 5px;
+  }
+
+  .sg-table-scroll table {
+    font-size: 12px;
+  }
+
+  .sg-table-scroll th {
+    font-size: 11px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .sg-model-cell {
+    gap: 5px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  .sg-model-cell img {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .sg-table-scroll :is(th, td) {
+    padding-inline: 3px;
+  }
+
+  .sg-model-cell {
+    gap: 3px;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "seekgnomes-company-mark-sources/v1",
+  "purpose": "Corporate identifiers used for GLM and MiMo across the historical leaderboard charts and table.",
+  "logos": {
+    "glm": {
+      "company": "智谱 / Z.AI",
+      "officialPage": "https://www.zhipuai.cn/zh",
+      "identitySource": "https://www.zhipuai.cn/zh/about",
+      "sourceAsset": "https://www.zhipuai.cn/logo.svg",
+      "sourceSha256": "3f8e33a42855c45b94c6fd80c45ebd5dd4c2bfd26ec0f0fe5629f9c3c72b0121",
+      "selectedPathIndices": [
+        9,
+        10,
+        11
+      ],
+      "adaptation": "Retain the exact three official geometric Z paths, omit Chinese wordmark paths, apply one uniform scale and translation to center inside a 24x24 square. No logo path is redrawn.",
+      "localFile": "glm.svg",
+      "localSha256": "f301034b1b2bbe9e7efe558a618f29bd995dfadd76d343b2f7c82a40ecffcd20"
+    },
+    "mimo": {
+      "company": "Xiaomi Corporation",
+      "officialPage": "https://www.mi.com/global/",
+      "sourceStylesheet": "https://www.mi.com/sgp/spps_files/store/1.0.31-v2/css/global/index.css",
+      "officialDefaultState": ".navigation__logo .logo__home { transform: translate(-100%); }",
+      "sourcePageSha256": "f681c5a50d1628bffba52a8c255c55246983d7f6d4216d25e461f78aa718b5b5",
+      "extractedSvgSha256": "34b661babfe3878a9db8581c30211cea4df6bbf08e77c065d8feb5facdd0572e",
+      "adaptation": "Embed official header paths with explicit translate(-112 0), corresponding to the 112px viewBox default non-hover state; remove animation and external CSS dependency.",
+      "localFile": "mimo.svg",
+      "localSha256": "3f78a4e4a7aaac880f92963dbdab99265bc46a99a4a5361c4a88c9dc3d9c6151"
+    }
+  },
+  "rights": "Company names and marks belong to their respective owners. No open-source license grant for the corporate marks is asserted."
+}

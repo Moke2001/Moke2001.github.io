@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title description">
+  <title id="title">Cube interactions in three-dimensional fracton models</title>
+  <desc id="description">An axonometric cubic lattice window highlights the twelve edges of one cube and selected edge qubits. Dotted extensions indicate continuation in three dimensions. This is a schematic of local interaction support rather than a finite-size calculation or a state.</desc>
+  <g fill="none" stroke="#d1dce3" stroke-width="1.15" stroke-linejoin="round"><path d="M66 48H206V118H66ZM106 18H246V88H106ZM66 48 106 18M136 48 176 18M206 48 246 18M66 118 106 88M136 118 176 88M206 118 246 88M136 48V118M176 18V88M106 88H246"/><path d="M48 48H66M206 48H265M48 118H66M206 118H265M106 18 122 6M246 18 262 6M66 118 50 130M206 118 190 130" stroke-dasharray="2 5"/></g>
+  <path d="M136 48H206V118H136ZM176 18H246V88H176ZM136 48 176 18M206 48 246 18M206 118 246 88M136 118 176 88" fill="none" stroke="#236b99" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M136 48H206L246 18H176Z" fill="#eaf3f9" fill-opacity=".75" stroke="#236b99" stroke-width="1.8"/>
+  <g fill="#fff" stroke="#236b99" stroke-width="1.35"><circle cx="171" cy="48" r="3.5"/><circle cx="206" cy="83" r="3.5"/><circle cx="171" cy="118" r="3.5"/><circle cx="136" cy="83" r="3.5"/><circle cx="211" cy="18" r="3.5"/><circle cx="246" cy="53" r="3.5"/><circle cx="211" cy="88" r="3.5"/><circle cx="176" cy="53" r="3.5"/><circle cx="156" cy="33" r="3.5"/><circle cx="226" cy="33" r="3.5"/><circle cx="226" cy="103" r="3.5"/><circle cx="156" cy="103" r="3.5"/></g>
+</svg>

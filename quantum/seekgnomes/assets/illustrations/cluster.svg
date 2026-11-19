@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" role="img" aria-labelledby="title description">
+  <title id="title">A cluster-state stabilizer on a square lattice</title>
+  <desc id="description">The central qubit carries X and its four nearest neighbors carry Z, illustrating one local cluster stabilizer. Gray sites and dotted bonds show the surrounding infinite lattice.</desc>
+  <g stroke="#d8d5e2" stroke-width="1.2" fill="none"><path d="M40 25H280M40 70H280M40 115H280M70 12V128M115 12V128M160 12V128M205 12V128M250 12V128"/><path d="M20 25H40M280 25H300M20 70H40M280 70H300M20 115H40M280 115H300" stroke-dasharray="2 5"/></g>
+  <g fill="#d1cad9"><circle cx="70" cy="25" r="3"/><circle cx="115" cy="25" r="3"/><circle cx="205" cy="25" r="3"/><circle cx="250" cy="25" r="3"/><circle cx="70" cy="70" r="3"/><circle cx="250" cy="70" r="3"/><circle cx="70" cy="115" r="3"/><circle cx="115" cy="115" r="3"/><circle cx="205" cy="115" r="3"/><circle cx="250" cy="115" r="3"/></g>
+  <path d="M115 70H205M160 25V115" stroke="#8b5fbf" stroke-width="2.4"/>
+  <g fill="#faf7fd" stroke="#b59acf" stroke-width="1.5"><circle cx="115" cy="70" r="13"/><circle cx="205" cy="70" r="13"/><circle cx="160" cy="25" r="13"/><circle cx="160" cy="115" r="13"/></g>
+  <circle cx="160" cy="70" r="16" fill="#8b5fbf"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-size="12" fill="#8b5fbf"><text x="115" y="74">Z</text><text x="205" y="74">Z</text><text x="160" y="29">Z</text><text x="160" y="119">Z</text></g>
+  <text x="160" y="75" fill="#fff" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15">X</text>
+</svg>

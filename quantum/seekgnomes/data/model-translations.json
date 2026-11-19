@@ -1,0 +1,336 @@
+{
+  "schema": "seekgnomes.website.model-translations/v1",
+  "language": "zh-CN",
+  "models": {
+    "01": {
+      "name": "横场Ising链",
+      "short_name": "横场Ising链",
+      "description": "无限链上的铁磁最近邻ZZ相互作用与横向X场竞争.",
+      "lattice": "整数链"
+    },
+    "02": {
+      "name": "纵横混合场Ising链",
+      "short_name": "混合场Ising链",
+      "description": "在横场Ising链中加入纵向Z场, 保留两种不同方向的场.",
+      "lattice": "整数链"
+    },
+    "03": {
+      "name": "轴向次近邻Ising链",
+      "short_name": "ANNNI链",
+      "description": "最近邻铁磁与次近邻反铁磁Ising相互作用竞争, 同时存在横场.",
+      "lattice": "整数链"
+    },
+    "04": {
+      "name": "各向异性XY链",
+      "short_name": "各向异性XY链",
+      "description": "不同强度的最近邻XX和YY耦合与横向Z场共同作用.",
+      "lattice": "整数链"
+    },
+    "05": {
+      "name": "纵场XXZ链",
+      "short_name": "纵场XXZ链",
+      "description": "各向异性最近邻交换与沿z方向的磁场作用于无限链.",
+      "lattice": "整数链"
+    },
+    "06": {
+      "name": "零场XYZ链",
+      "short_name": "零场XYZ链",
+      "description": "三个自旋分量具有不同的最近邻耦合强度, 不加外场.",
+      "lattice": "整数链"
+    },
+    "07": {
+      "name": "J1-J2反铁磁Heisenberg链(Majumdar-Ghosh点)",
+      "short_name": "Majumdar-Ghosh链",
+      "description": "最近邻与次近邻自旋1/2交换取在具有精确二聚体基态的参数点.",
+      "lattice": "整数链"
+    },
+    "08": {
+      "name": "一维簇态稳定子模型",
+      "short_name": "一维簇态模型",
+      "description": "每个中心qubit通过对易ZXZ算符与左右相邻qubit耦合.",
+      "lattice": "整数链"
+    },
+    "09": {
+      "name": "Cluster-Ising链",
+      "short_name": "Cluster-Ising链",
+      "description": "三站点XZX簇态相互作用与最近邻YY相互作用竞争.",
+      "lattice": "整数链"
+    },
+    "10": {
+      "name": "交替量子罗盘链",
+      "short_name": "交替罗盘链",
+      "description": "XX键和ZZ键沿链交替排列, 每个平移晶胞含两个qubit.",
+      "lattice": "每晶胞两个站点的链"
+    },
+    "11": {
+      "name": "一维J-Q2链",
+      "short_name": "J-Q2链",
+      "description": "单重态投影键与相邻不相交键上投影算符的乘积构成一维J-Q相互作用.",
+      "lattice": "整数链"
+    },
+    "12": {
+      "name": "两腿Heisenberg梯子",
+      "short_name": "两腿Heisenberg梯子",
+      "description": "反铁磁交换沿两条腿传播, 并跨越每个双qubit晶胞中的梯级.",
+      "lattice": "每晶胞一个梯级"
+    },
+    "13": {
+      "name": "方格晶格横场Ising模型",
+      "short_name": "方格TFIM",
+      "description": "方格晶格上的最近邻ZZ键与均匀横向X场竞争.",
+      "lattice": "方格晶格"
+    },
+    "14": {
+      "name": "三角晶格反铁磁横场Ising模型",
+      "short_name": "三角晶格反铁磁TFIM",
+      "description": "三角形上的反铁磁Ising键将几何受挫与横场量子涨落结合.",
+      "lattice": "三角晶格原始基矢"
+    },
+    "15": {
+      "name": "方格J1-J2反铁磁Heisenberg模型",
+      "short_name": "方格J1-J2模型",
+      "description": "方格晶格的最近邻交换与两种对角方向的次近邻交换竞争.",
+      "lattice": "方格晶格; 次近邻包括两种对角方向"
+    },
+    "16": {
+      "name": "三角晶格反铁磁Heisenberg模型",
+      "short_name": "三角晶格Heisenberg模型",
+      "description": "最近邻反铁磁自旋交换作用于三角晶格.",
+      "lattice": "三角晶格原始基矢"
+    },
+    "17": {
+      "name": "kagome反铁磁Heisenberg模型",
+      "short_name": "kagome Heisenberg模型",
+      "description": "最近邻反铁磁交换作用于共角三角形网络, 每个原始晶胞含三个qubit.",
+      "lattice": "三角基矢; 位置A=0, B=a1/2, C=a2/2"
+    },
+    "18": {
+      "name": "Shastry-Sutherland正交二聚体模型",
+      "short_name": "Shastry-Sutherland模型",
+      "description": "方格交换与正交二聚体键取在具有精确单重态二聚体乘积基态的参数点.",
+      "lattice": "2×2方格晶胞; 胞内编号x+2y; 对角键位于偶-偶和奇-奇面元"
+    },
+    "19": {
+      "name": "方格J-Q模型",
+      "short_name": "方格J-Q模型",
+      "description": "方格单重态投影相互作用包含每个面元上两组相对边投影的乘积.",
+      "lattice": "方格晶格; 每个面元计入两组相对边投影的乘积"
+    },
+    "20": {
+      "name": "方格量子罗盘模型",
+      "short_name": "方格罗盘模型",
+      "description": "水平XX键和竖直ZZ键将自旋分量与方格晶格的键方向联系起来.",
+      "lattice": "方格晶格"
+    },
+    "21": {
+      "name": "Xu-Moore量子面元Ising模型",
+      "short_name": "Xu-Moore面元模型",
+      "description": "四qubit的Z面元相互作用与单站点横向X场竞争.",
+      "lattice": "方格晶格; 每晶胞一个面元"
+    },
+    "22": {
+      "name": "蜂窝Kitaev模型",
+      "short_name": "蜂窝Kitaev模型",
+      "description": "三种键颜色分别选择XX, YY和ZZ相互作用, 每个蜂窝晶胞含两个qubit.",
+      "lattice": "蜂窝砖墙约定: z键在晶胞内, x键连接B[-1,0], y键连接B[0,-1]"
+    },
+    "23": {
+      "name": "蜂窝Heisenberg-Kitaev-Gamma模型",
+      "short_name": "Heisenberg-Kitaev-Gamma模型",
+      "description": "蜂窝键结合各向同性交换, 键依赖的自旋分量和对称非对角交换.",
+      "lattice": "蜂窝晶格; 键约定与22号题一致"
+    },
+    "24": {
+      "name": "Yao-Kivelson装饰蜂窝Kitaev模型",
+      "short_name": "装饰蜂窝Kitaev模型",
+      "description": "用三角形替换蜂窝顶点, 在六qubit晶胞中形成按键颜色区分的相互作用.",
+      "lattice": "A/B两个三角形; 编号3s+α, α=x,y,z; 内部边按缺失颜色着色, 外部键继承蜂窝键色"
+    },
+    "25": {
+      "name": "二维环面码模型",
+      "short_name": "二维toric code",
+      "description": "X型星算符与Z型面算符作用于无限方格晶格的边qubit.",
+      "lattice": "方格边: 编号0表示由晶胞起点出发的+x边, 编号1表示+y边"
+    },
+    "26": {
+      "name": "Wen面元模型",
+      "short_name": "Wen面元模型",
+      "description": "对易的四qubit XYXY算符沿方格面元循环排列.",
+      "lattice": "方格顶点; 面元上的Pauli算符按XYXY循环排列"
+    },
+    "27": {
+      "name": "蜂窝二维色码模型",
+      "short_name": "蜂窝色码",
+      "description": "X型和Z型六边形算符作用于蜂窝晶格的顶点qubit.",
+      "lattice": "蜂窝图与22号题一致; 每晶胞一个六边形; qubit位于顶点"
+    },
+    "28": {
+      "name": "方格簇态稳定子模型",
+      "short_name": "二维簇态模型",
+      "description": "中心X算符与方格晶格四个相邻站点的Z算符相乘.",
+      "lattice": "方格晶格顶点"
+    },
+    "29": {
+      "name": "三角晶格Levin-Gu Ising SPT模型",
+      "short_name": "Levin-Gu SPT模型",
+      "description": "自旋翻转带有周围Ising畴壁产生的相位, 定义三角晶格上的对称性保护拓扑固定点.",
+      "lattice": "六个邻居按a1, a2, a2-a1, -a1, -a2, a1-a2循环排列; 保留原Bp的负号"
+    },
+    "30": {
+      "name": "Union-Jack CCZ对称性保护拓扑模型",
+      "short_name": "Union-Jack CCZ模型",
+      "description": "Union-Jack晶格上的受控-受控-Z电路将自旋翻转修饰为带受控-Z相位的算符.",
+      "lattice": "A为整数r处的方格顶点, B为r+(1/2,1/2)处的面心; 每个方格划分为四个三角形"
+    },
+    "31": {
+      "name": "横场Baxter-Wu模型",
+      "short_name": "量子Baxter-Wu模型",
+      "description": "两种朝向三角面元上的三自旋Ising相互作用与横场竞争.",
+      "lattice": "三角基矢; 向上和向下的三角形均计入"
+    },
+    "32": {
+      "name": "BFG广义kagome易轴模型",
+      "short_name": "BFG kagome模型",
+      "description": "易轴相互作用耦合每个kagome六边形内的全部站点对, 并加入较弱横向交换.",
+      "lattice": "kagome晶格与17号题一致; 每个六边形包含全部15对相互作用; 保留精确常数项"
+    },
+    "33": {
+      "name": "kagome Heisenberg与标量手性模型",
+      "short_name": "手性kagome模型",
+      "description": "Heisenberg交换之外, 在kagome三角形上加入带统一取向的标量自旋手性项.",
+      "lattice": "kagome晶格与17号题一致; A0 B0 C0和A0 B[-1,0] C[0,-1]两个三角形均按逆时针取向"
+    },
+    "34": {
+      "name": "简单立方横场Ising模型",
+      "short_name": "立方TFIM",
+      "description": "三维简单立方晶格的Ising键与均匀横场竞争.",
+      "lattice": "简单立方晶格"
+    },
+    "35": {
+      "name": "简单立方J1-J2反铁磁Heisenberg模型",
+      "short_name": "立方J1-J2模型",
+      "description": "简单立方最近邻交换与全部面对角方向的交换竞争.",
+      "lattice": "简单立方晶格; 次近邻包括全部面对角方向"
+    },
+    "36": {
+      "name": "体心立方J1-J2反铁磁Heisenberg模型",
+      "short_name": "BCC J1-J2模型",
+      "description": "竞争交换分别连接体心立方晶格的最近邻与次近邻站点.",
+      "lattice": "原始基矢a1=(1,1,-1)/2, a2=(-1,1,1)/2, a3=(1,-1,1)/2"
+    },
+    "37": {
+      "name": "三维立方量子罗盘模型",
+      "short_name": "立方罗盘模型",
+      "description": "XX, YY和ZZ相互作用分别分配给简单立方晶格的三个方向.",
+      "lattice": "简单立方晶格; 三种耦合均为正"
+    },
+    "38": {
+      "name": "立方横场面元Ising模型",
+      "short_name": "立方面元Ising模型",
+      "description": "四自旋Ising项占据三个方向的全部基本面元, 并与横场竞争.",
+      "lattice": "包括全部xy, yz和zx基本面元"
+    },
+    "39": {
+      "name": "焦绿石XXZ量子自旋冰模型",
+      "short_name": "量子自旋冰模型",
+      "description": "XXZ交换作用于共角焦绿石四面体, 每个原始晶胞含四个qubit.",
+      "lattice": "FCC基矢a1=(0,1,1)/2, a2=(1,0,1)/2, a3=(1,1,0)/2; 位置0, a1/2, a2/2, a3/2; 使用抽象qubit轴"
+    },
+    "40": {
+      "name": "二聚化金刚石Heisenberg模型",
+      "short_name": "二聚化金刚石模型",
+      "description": "较强晶胞内交换与较弱晶胞间交换区分金刚石晶格的一种键方向.",
+      "lattice": "FCC原始坐标; A0-B0为强键, A0-B[-eμ]为弱键"
+    },
+    "41": {
+      "name": "Hyperhoneycomb晶格Kitaev模型",
+      "short_name": "Hyperhoneycomb Kitaev模型",
+      "description": "按键选择XX, YY和ZZ的相互作用延伸到三维Hyperhoneycomb晶格.",
+      "lattice": "四站点原始晶胞; 采用原文明确的六条着色键约定"
+    },
+    "42": {
+      "name": "Hyperoctagon晶格Kitaev模型",
+      "short_name": "Hyperoctagon Kitaev模型",
+      "description": "三维三配位晶格具有按键颜色区分的Kitaev相互作用, 每晶胞含四个qubit.",
+      "lattice": "BCC原始基矢a1=(1,0,0), a2=(1,1,-1)/2, a3=(1,1,1)/2; 明确列出六条键"
+    },
+    "43": {
+      "name": "Hyperkagome反铁磁Heisenberg模型",
+      "short_name": "Hyperkagome Heisenberg模型",
+      "description": "最近邻反铁磁交换作用于三维共角三角形网络, 每晶胞含十二个qubit.",
+      "lattice": "简单立方原始晶胞; 站点位置取自arXiv:2311.08210式(1)并按晶胞取模; 最近邻距离平方为1/8"
+    },
+    "44": {
+      "name": "简单立方簇态稳定子模型",
+      "short_name": "三维簇态模型",
+      "description": "中心X算符与简单立方晶格六个相邻站点的Z算符相乘.",
+      "lattice": "简单立方晶格顶点"
+    },
+    "45": {
+      "name": "三维环面码模型",
+      "short_name": "三维toric code",
+      "description": "X型顶点星算符与Z型面算符作用于立方晶格的边qubit.",
+      "lattice": "胞内编号μ表示由参考顶点出发的+μ方向边"
+    },
+    "46": {
+      "name": "X-cube分形子模型",
+      "short_name": "X-cube模型",
+      "description": "十二条边上的X立方体算符与平面内四条边上的Z十字算符构成立方分形子哈密顿量.",
+      "lattice": "边qubit的编号与45号题一致; 立方体X项与平面十字Z项"
+    },
+    "47": {
+      "name": "Checkerboard分形子模型",
+      "short_name": "Checkerboard模型",
+      "description": "八qubit的X和Z立方体算符作用于简单立方晶格的棋盘格子晶格.",
+      "lattice": "2×2×2立方晶胞; 胞内编号x+2y+4z; 取最低角坐标和为偶数的立方体"
+    },
+    "48": {
+      "name": "Haah立方码1",
+      "short_name": "Haah立方码",
+      "description": "双qubit立方晶胞承载按码1多项式几何定义的对易X和Z相互作用.",
+      "lattice": "F={0,ex,ey,ez}, G={0,ex+ey,ey+ez,ez+ex}; Z项需同时反射支持并交换F/G"
+    },
+    "49": {
+      "name": "Chamon模型",
+      "short_name": "Chamon模型",
+      "description": "六qubit混合Pauli稳定子作用于面心立方晶格.",
+      "lattice": "FCC偶子格站点; 原始基矢a1=ex+ey, a2=ey+ez, a3=ez+ex; 参考稳定子的奇子格中心为ex"
+    },
+    "50": {
+      "name": "截角八面体三维色码模型",
+      "short_name": "三维色码",
+      "description": "对易X型和Z型算符定义在截角八面体密铺上, 每个平移晶胞含十二个qubit.",
+      "lattice": "BCC点集Z³及Z³+(1/2,1/2,1/2)的Voronoi胞; qubit位于Voronoi顶点; 使用常规立方平移"
+    }
+  },
+  "families": {
+    "ising": {
+      "name": "Ising与面元模型",
+      "description": "局域Ising相互作用, 横场与多自旋面元在一维, 二维和三维中检验量子涨落."
+    },
+    "exchange": {
+      "name": "交换与受挫模型",
+      "description": "链, 梯子与受挫晶格上的自旋交换覆盖各向异性, 二聚化, 手性和量子自旋冰."
+    },
+    "kitaev": {
+      "name": "罗盘与Kitaev模型",
+      "description": "键方向选择自旋分量, 从量子罗盘相互作用延伸到蜂窝及三维三配位Kitaev晶格."
+    },
+    "cluster": {
+      "name": "簇态与对称性保护拓扑",
+      "description": "多qubit簇态及对称性保护拓扑(SPT)固定点哈密顿量提供具有明确结构的纠缠态目标."
+    },
+    "topological": {
+      "name": "拓扑码模型",
+      "description": "面, 星和胞体上的局域对易算符定义具有拓扑序的自旋与量子码哈密顿量."
+    },
+    "fracton": {
+      "name": "分形子码模型",
+      "description": "三维对易Pauli模型呈现受限激发运动, 以及超出普通拓扑码的几何结构."
+    }
+  },
+  "notes": {
+    "en": "Translations describe the frozen catalogue only; the Hamiltonian parameters, terms, topology and energy normalization are not changed.",
+    "zh": "译文仅描述冻结题库, 不改变哈密顿量参数, Pauli项, 晶格连接或能量归一化."
+  }
+}
