@@ -8,7 +8,7 @@ const source = readFileSync(new URL('../../assets/visitor-tracker.js', import.me
 const endpoint = 'https://visits.example.test/visit';
 
 function browser(options = {}) {
-  const location = new URL(options.url ?? 'https://moke2001.github.io/#/');
+  const location = new URL(options.url ?? 'https://mooke2001.github.io/#/');
   const listeners = new Map();
   const requests = [];
   const timers = [];
@@ -137,7 +137,7 @@ test('HTTP is accepted only when both the page and endpoint are loopback preview
   for (const [url, configuredEndpoint] of [
     ['http://localhost:4173/#/', 'http://visits.example.test/visit'],
     ['http://127.0.0.1:4173/#/', 'http://192.168.1.2:8787/visit'],
-    ['https://moke2001.github.io/#/', 'http://127.0.0.1:8787/visit'],
+    ['https://mooke2001.github.io/#/', 'http://127.0.0.1:8787/visit'],
     ['http://localhost.example.test/#/', 'http://localhost:8787/visit']
   ]) {
     await t.test(`${url} rejects ${configuredEndpoint}`, () => {
@@ -149,7 +149,7 @@ test('HTTP is accepted only when both the page and endpoint are loopback preview
 });
 
 test('normal pages and known publication/project details are tracked on hash navigation', () => {
-  const page = browser({ url: 'https://moke2001.github.io/' });
+  const page = browser({ url: 'https://mooke2001.github.io/' });
   for (const hash of ['#/research', '#/research/paper-a', '#/projects', '#/projects/tool-a', '#/quantum']) {
     page.navigate(hash);
   }
@@ -186,11 +186,11 @@ test('section/query changes and a language change without a new hash do not crea
 test('legacy home/profile/latest hashes normalize to the same canonical page paths', async t => {
   for (const [hash, expected] of [['#home', '/'], ['#profile', '/'], ['#latest', '/research']]) {
     await t.test(hash, () => {
-      const page = browser({ url: `https://moke2001.github.io/${hash}` });
+      const page = browser({ url: `https://mooke2001.github.io/${hash}` });
       assert.deepEqual(page.paths(), [expected]);
     });
   }
-  const page = browser({ url: 'https://moke2001.github.io/#home' });
+  const page = browser({ url: 'https://mooke2001.github.io/#home' });
   page.navigate('#profile');
   page.navigate('#/');
   page.navigate('#latest');
@@ -204,7 +204,7 @@ test('unknown routes and malformed encoded IDs are not sent', async t => {
     '#/quantum/unknown', '#/research/%E0%A4%A', '#/projects/%ZZ'
   ]) {
     await t.test(hash, () => {
-      const page = browser({ url: `https://moke2001.github.io/${hash}` });
+      const page = browser({ url: `https://mooke2001.github.io/${hash}` });
       assert.equal(page.requests.length, 0);
       page.navigate('#/research/paper-a');
       page.navigate(hash);
@@ -215,7 +215,7 @@ test('unknown routes and malformed encoded IDs are not sent', async t => {
 });
 
 test('missing content metadata does not turn an arbitrary detail ID into a tracked route', () => {
-  const page = browser({ url: 'https://moke2001.github.io/#/research/paper-a', content: {} });
+  const page = browser({ url: 'https://mooke2001.github.io/#/research/paper-a', content: {} });
   page.navigate('#/projects/tool-a');
   assert.equal(page.requests.length, 0);
   page.navigate('#/research');
@@ -224,7 +224,7 @@ test('missing content metadata does not turn an arbitrary detail ID into a track
 
 test('the request sends only the canonical path with no IP, query, form, cookie, or referrer data', () => {
   const page = browser({
-    url: 'https://moke2001.github.io/?ip=203.0.113.9&token=private#/research/paper-a?message=private'
+    url: 'https://mooke2001.github.io/?ip=203.0.113.9&token=private#/research/paper-a?message=private'
   });
   assert.equal(page.requests.length, 1);
   const request = page.requests[0];

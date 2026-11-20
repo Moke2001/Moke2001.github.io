@@ -259,8 +259,8 @@ window.STUDIO_CONTENT = {
       },
       field: { zh: '量子信息科学', en: 'Quantum Information Science' },
       date: '',
-      github: 'https://github.com/Moke2001/ExtendedStim',
-      zip: 'https://github.com/Moke2001/ExtendedStim/archive/refs/heads/master.zip',
+      github: 'https://github.com/Mooke2001/ExtendedStim',
+      zip: 'https://github.com/Mooke2001/ExtendedStim/archive/refs/heads/master.zip',
       motivation: {
         zh: '构造和测试量子纠错码需要连接码参数计算与电路模拟, 项目因此提供面向费米和玻色量子纠错的共同工作流程.',
         en: 'Constructing and testing quantum error-correcting codes motivates a shared workflow connecting code-parameter computation with circuit simulation for fermionic and bosonic settings.'
@@ -284,8 +284,8 @@ window.STUDIO_CONTENT = {
       field: { zh: '量子多体', en: 'Quantum many-body physics' },
       cardTag: 'LLM',
       date: 'v1.3.0',
-      github: 'https://github.com/Moke2001/SeekGnomes',
-      download: 'https://github.com/Moke2001/SeekGnomes/releases/download/v1.3.0/seekgnomes-v1.3.0-public-build-context.tar.gz',
+      github: 'https://github.com/Mooke2001/SeekGnomes',
+      download: 'https://github.com/Mooke2001/SeekGnomes/releases/download/v1.3.0/seekgnomes-v1.3.0-public-build-context.tar.gz',
       quantumPage: './quantum/seekgnomes/'
     }
   ]

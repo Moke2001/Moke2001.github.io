@@ -1,6 +1,6 @@
 # Eureka Studio
 
-Eureka Studio个人工作室主页. 使用原生HTML, CSS和JavaScript, 无需安装依赖或执行构建, 可部署到GitHub Pages. 代码仓库为https://github.com/Moke2001/Moke2001.github.io, 使用GitHub Pages发布.
+Eureka Studio个人工作室主页. 使用原生HTML, CSS和JavaScript, 无需安装依赖或执行构建, 可部署到GitHub Pages. 代码仓库为https://github.com/Mooke2001/mooke2001.github.io, 使用GitHub Pages发布.
 
 ## 本地预览
 
@@ -33,7 +33,7 @@ python3 -m http.server 4173 --bind 127.0.0.1
 | `.github/workflows/pages.yml` | GitHub Pages部署工作流 |
 | `.nojekyll` | 静态站点标记 |
 
-更新正式内容时修改`data/content.js`. 当前已录入5篇论文和1个开源项目ExtendedStim. 5篇论文均提供arXiv公开PDF, LaTeX源文件, 摘要页和SciRate链接, 并按日期从新到旧排列. 最新论文为[arXiv:2611.06469v1](https://arxiv.org/abs/2611.06469v1). ExtendedStim的仓库入口为[GitHub正式仓库](https://github.com/Moke2001/ExtendedStim), ZIP入口指向该仓库实际的`master`分支.
+更新正式内容时修改`data/content.js`. 当前已录入5篇论文和1个开源项目ExtendedStim. 5篇论文均提供arXiv公开PDF, LaTeX源文件, 摘要页和SciRate链接, 并按日期从新到旧排列. 最新论文为[arXiv:2611.06469v1](https://arxiv.org/abs/2611.06469v1). ExtendedStim的仓库入口为[GitHub正式仓库](https://github.com/Mooke2001/ExtendedStim), ZIP入口指向该仓库实际的`master`分支.
 
 内容配置采用以下结构. 需要双语的文本使用`{ zh: '中文', en: 'English' }`, 论文题目, 作者和摘要保留原英文.
 

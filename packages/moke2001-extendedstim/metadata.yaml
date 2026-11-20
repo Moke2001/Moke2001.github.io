@@ -1,7 +1,7 @@
 source_type: github
-owner: Moke2001
+owner: Mooke2001
 repo: ExtendedStim
-full_name: Moke2001/ExtendedStim
+full_name: Mooke2001/ExtendedStim
 title: ExtendedStim
 summary: ExtendedStim 是一个面向量子纠错研究的 Python 工具包。
 overview: 'ExtendedStim 是一个面向量子纠错研究的 Python 工具包。对一般读者来说，量子纠错可以理解为给极其脆弱的量子信息设计“防错机制”：研究者需要构造纠错码、模拟量子线路中的噪声，并估计错误最终是否会破坏真正要保存的信息。
@@ -12,9 +12,9 @@ overview: 'ExtendedStim 是一个面向量子纠错研究的 Python 工具包。
 
 
   从用途上看，它更像一个研究软件工作台：先搭建纠错码和量子线路，再用模拟器反复抽样错误过程，最后比较预测正确性和逻辑错误率。仓库说明标题还强调它同时关注费米子和玻色子量子纠错，因此它服务的是更广泛的量子信息保护问题，而不只是某一种硬件或某一种码型。'
-github_url: https://github.com/Moke2001/ExtendedStim
-clone_url: https://github.com/Moke2001/ExtendedStim.git
-zip_url: https://github.com/Moke2001/ExtendedStim/archive/refs/heads/master.zip
+github_url: https://github.com/Mooke2001/ExtendedStim
+clone_url: https://github.com/Mooke2001/ExtendedStim.git
+zip_url: https://github.com/Mooke2001/ExtendedStim/archive/refs/heads/master.zip
 homepage: ''
 default_branch: master
 language: Python

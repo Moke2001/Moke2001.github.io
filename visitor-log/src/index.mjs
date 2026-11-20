@@ -1,4 +1,4 @@
-const DEFAULT_ORIGIN = 'https://moke2001.github.io';
+const DEFAULT_ORIGIN = 'https://mooke2001.github.io';
 const MAX_BODY_BYTES = 1024;
 const DAY_MS = 24 * 60 * 60 * 1000;
 

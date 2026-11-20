@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import worker from '../src/index.mjs';
 
-const ORIGIN = 'https://moke2001.github.io';
+const ORIGIN = 'https://mooke2001.github.io';
 const CLIENT_IP = '203.0.113.8';
 const NOW = Date.parse('2026-11-10T12:34:20.123Z');
 const DAY_MS = 86_400_000;
@@ -177,7 +177,7 @@ test('traversal, encoded paths, control characters, unsafe slugs, and unrelated 
     '/admin', '//research', '/research/', '/research/../projects', '/research/%2e%2e', '/research/a%2fb',
     '/research/a/b', '/projects/a\\b', '/research/a\n', '/research/a\u0000', '/research/Upper',
     '/research/a_b', '/research/-a', '/research/a-', '/research/a--b', '/research/a#private',
-    '/quantum/detail', '/research/' + 'a'.repeat(129), 'https://moke2001.github.io/research', '', ' /research'
+    '/quantum/detail', '/research/' + 'a'.repeat(129), 'https://mooke2001.github.io/research', '', ' /research'
   ]) {
     assert.equal((await worker.fetch(request({ path }), { DB: db })).status, 400, JSON.stringify(path));
   }

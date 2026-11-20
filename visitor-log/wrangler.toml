@@ -4,7 +4,7 @@ compatibility_date = "2026-11-10"
 workers_dev = true
 
 [vars]
-ALLOWED_ORIGIN = "https://moke2001.github.io"
+ALLOWED_ORIGIN = "https://mooke2001.github.io"
 RETENTION_DAYS = "30"
 
 [observability]
